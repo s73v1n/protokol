@@ -215,7 +215,9 @@ $this->load->view('template/sidebar');
     <!-- ============================================================== -->
     <!-- End Wrapper -->
     <!-- ============================================================== -->
-    
+   <?php foreach($js_files as $file): ?>
+        <script src="<?php echo $file; ?>"></script>
+    <?php endforeach; ?> 
 <?php
 $this->load->view('template/footer');
 ?>
