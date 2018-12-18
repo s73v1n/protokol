@@ -20,6 +20,7 @@ class Panel extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('panel');
+		$data['footer'] = '@2018 Protokol Pemerintah Kota Jambi';
+		$this->load->view('panel',$data);
 	}
 }
