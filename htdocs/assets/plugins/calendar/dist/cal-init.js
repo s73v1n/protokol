@@ -132,7 +132,7 @@
 
         var defaultEvents =  [{
                 title: 'Released Ample Admin!',
-                start: '2018-12-04 08:00:00',
+                start: '2018-12-04',
                 className: 'bg-info'
             }, {
                 title: 'This is today check date',
