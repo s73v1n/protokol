@@ -1,5 +1,10 @@
 <?php
 $this->load->view('template/head');
+?>
+<?php foreach($css_files as $file): ?>
+	<link type="text/css" rel="stylesheet" href="<?php echo $file; ?>" />
+<?php endforeach; ?>
+<?php
 $this->load->view('template/topbar');
 $this->load->view('template/sidebar');
 ?>

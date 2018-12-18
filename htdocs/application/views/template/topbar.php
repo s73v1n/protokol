@@ -1,3 +1,4 @@
+</head>
 <body class="fix-header fix-sidebar card-no-border logo-center">
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->
