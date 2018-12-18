@@ -14,7 +14,7 @@ class Panel extends CI_Controller {
 	public function _example_output($output = null)
 	{
 		
-		$this->load->view('example.php',(array)$output);
+		$this->load->view('panel.php',(array)$output);
 	}
 
 	
@@ -26,7 +26,7 @@ class Panel extends CI_Controller {
 	{
 			$crud = new grocery_CRUD();
 			//$crud->set_theme('bootstrap');
-			//$crud->unset_bootstrap();
+			$crud->unset_bootstrap();
 			//$crud->unset_jquery();
 			$crud->set_table('tbl_giat');
 			$crud->set_relation('disposisi','tbl_diposisi','perangkat');
