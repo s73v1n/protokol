@@ -1,26 +1,59 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Panel extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
+	public function __construct()
+	{
+		parent::__construct();
+
+		$this->load->database();
+		$this->load->helper('url');
+		$this->load->library('grocery_CRUD');
+	}
+
+	public function _example_output($output = null)
+	{
+		
+		$this->load->view('panel.php',(array)$output);
+	}
+
+	
 	public function index()
 	{
-		$data['footer'] = '@2018 Protokol Pemerintah Kota Jambi';
-		$this->load->view('panel',$data);
+		$this->_example_output((object)array('output' => '' , 'footer' => '2018@Bagian Protokol Pemerintah Kota Jambi','js_files' => array() , 'css_files' => array()));
 	}
+	public function agenda()
+	{
+			$crud = new grocery_CRUD();
+			$crud->set_theme('bootstrap');
+			$crud->unset_bootstrap();
+			$crud->set_table('tbl_giat');
+			$crud->set_relation('disposisi','tbl_diposisi','perangkat');
+			$crud->set_language('indonesian');
+			//$crud->columns('customerName','contactLastName','phone','city','country','salesRepEmployeeNumber','creditLimit');
+			//$crud->display_as('salesRepEmployeeNumber','from Employeer')
+			//	 ->display_as('customerName','Name')
+			//	 ->display_as('contactLastName','Last Name');
+			//$crud->set_subject('agenda');
+			//$crud->set_relation('salesRepEmployeeNumber','employees','lastName');
+
+			$output = $crud->render();
+
+			$this->_example_output($output);
+	}
+	public function perangkat($output = null)
+	{
+			$crud = new grocery_CRUD();
+			$crud->set_theme('bootstrap');
+			$crud->unset_bootstrap();
+			//$crud->unset_jquery();
+			$crud->set_table('tbl_diposisi');
+			$crud->callback_edit_field('color',function ($value, $primary_key) {
+			return '<input type="text" class="colorpicker-default form-control" value="'.$value.'" name="color">';
+			});
+			$output = $crud->render();
+			$this->load->view('disposisi.php',(array)$output);
+	}
+	
+	
 }
