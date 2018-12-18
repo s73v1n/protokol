@@ -26,7 +26,7 @@ class Panel extends CI_Controller {
 	{
 			$crud = new grocery_CRUD();
 			$crud->set_theme('bootstrap');
-			$crud->unset_bootstrap();
+			//$crud->unset_bootstrap();
 			$crud->set_table('tbl_giat');
 			$crud->set_relation('disposisi','tbl_diposisi','perangkat');
 			$crud->set_language('indonesian');
