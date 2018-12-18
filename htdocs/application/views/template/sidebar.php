@@ -9,9 +9,9 @@
                     <ul id="sidebarnav">
                         <li class="nav-small-cap">PERSONAL</li>
                         <li>
-                            <a class="has-arrow" href="<?php echo site_url('welcome');?>" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard </span></a>
+                            <a class="has-arrow" href="<?php echo site_url('panel');?>" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard </span></a>
                             <ul aria-expanded="false" class="collapse">
-                                <li><a href="<?php echo site_url('welcome');?>">Dashboard 1</a></li>
+                                <li><a href="<?php echo site_url('panel');?>">Dashboard 1</a></li>
                                 <li><a href="index2.html">Dashboard 2</a></li>
                                 <li><a href="index3.html">Dashboard 3</a></li>
                                 <li><a href="index4.html">Dashboard 4</a></li>
