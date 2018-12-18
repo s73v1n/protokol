@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Calendar extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -20,7 +20,6 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$data['footer'] = '@2018 Protokol Pemerintah Kota Jambi';
-		$this->load->view('blank',$data);
+		$this->load->view('calendar');
 	}
 }
