@@ -20,7 +20,7 @@ class Panel extends CI_Controller {
 	
 	public function index()
 	{
-		$this->_example_output((object)array('output' => '' , 'js_files' => array() , 'css_files' => array()));
+		$this->_example_output((object)array('output' => '' , 'footer'=>'data','js_files' => array() , 'css_files' => array()));
 	}
 	public function agenda()
 	{
