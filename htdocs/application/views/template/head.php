@@ -25,8 +25,7 @@
     <link href="<?php echo base_url('/assets/horizontal/css/colors/blue.css')?>" id="theme" rel="stylesheet">
 	<!-- Calendar CSS -->
 	<link href="<?php echo base_url('/assets/plugins/calendar/dist/fullcalendar.css')?>" rel="stylesheet" />
-	<?php 
-foreach($css_files as $file): ?>
+<?php foreach($css_files as $file): ?>
 	<link type="text/css" rel="stylesheet" href="<?php echo $file; ?>" />
 <?php endforeach; ?>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
