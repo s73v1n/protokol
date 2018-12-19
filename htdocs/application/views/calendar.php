@@ -168,8 +168,16 @@ $this->load->view('template/sidebar');
                                             <div class="modal-body">
                                                 <form>
                                                     <div class="form-group">
-                                                        <label for="recipient-name" class="control-label">Recipient:</label>
+                                                        <label for="recipient-name" class="control-label">Judul Kegiatan:</label>
                                                         <input type="text" class="form-control" id="recipient-name">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="recipient-name" class="control-label">Waktu:</label>
+                                                        <input type="text" class="form-control" id="waktu">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="recipient-name" class="control-label">Tempat:</label>
+                                                        <input type="text" class="form-control" id="tempat">
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="message-text" class="control-label">Message:</label>
