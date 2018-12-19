@@ -156,7 +156,7 @@ $this->load->view('template/sidebar');
 				<div class="col-md-4">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Responsive model</h4>
+                                <h4 class="card-title">Tambahkan Modal</h4>
                                 <!-- sample modal content -->
                                 <div id="responsive-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
                                     <div class="modal-dialog">
@@ -172,11 +172,11 @@ $this->load->view('template/sidebar');
                                                         <input type="text" class="form-control" id="recipient-name">
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="recipient-name" class="control-label">Waktu:</label>
+                                                        <label for="waktu" class="control-label">Waktu:</label>
                                                         <input type="text" class="form-control" id="waktu">
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="recipient-name" class="control-label">Tempat:</label>
+                                                        <label for="tempat" class="control-label">Tempat:</label>
                                                         <input type="text" class="form-control" id="tempat">
                                                     </div>
                                                     <div class="form-group">
@@ -186,8 +186,8 @@ $this->load->view('template/sidebar');
                                                 </form>
                                             </div>
                                             <div class="modal-footer">
-                                                <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-danger waves-effect waves-light">Save changes</button>
+                                                <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Tutup</button>
+                                                <button type="button" class="btn btn-danger waves-effect waves-light">Simpan</button>
                                             </div>
                                         </div>
                                     </div>
