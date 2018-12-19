@@ -65,10 +65,10 @@
             var form = $("<form></form>");
             form.append("<div class='form-group'></div>");
             form.find(".form-group")
-                .append("<div class='form-group'><label class='control-label'>Event Name</label><input class='form-control' placeholder='Insert Event Name' type='text' name='title'/></div>")
-                .append("<div class='form-group'><label class='control-label'>Category</label><select class='form-control' name='category'></select></div>")
-				.append("<div class='form-group'><label class='control-label'>Mulai</label><input class='form-control' placeholder='Waktu' type='text' name='beginning'></input></div>")
-                .append("<div class='form-group'><label class='control-label'>Akhir</label><input class='form-control' placeholder='Akhir' type='text' name='ending'></input></div>")
+                .append("<div class='form-group'><label class='control-label'>Event Name</label><input class='form-control' placeholder='Tambah Kegiatan' type='text' name='title'/></div>")
+                .append("<div class='form-group'><label class='control-label'>Event Name</label><input class='form-control' placeholder='awal' type='text' name='beginning'/></div>")
+				.append("<div class='form-group'><label class='control-label'>Event Name</label><input class='form-control' placeholder='akhir' type='text' name='ending'/></div>")
+				.append("<div class='form-group'><label class='control-label'>Category</label><select class='form-control' name='category'></select></div>")
 				.find("select[name='category']")
                 .append("<option value='bg-danger'>Danger</option>")
                 .append("<option value='bg-success'>Success</option>")
