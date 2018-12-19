@@ -125,6 +125,12 @@ $this->load->view('template/sidebar');
 										</div>
 										<div class="form-group">
                                         
+                                            <label class="control-label">Waktu</label>
+                                            <input class="form-control form-white" placeholder="Waktu" type="text" name="waktu" />
+                                       
+										</div>
+										<div class="form-group">
+                                        
                                             <label class="control-label">Pilih Warna</label>
                                             <select class="form-control form-white" data-placeholder="Pilih Warna .." name="category-color">
                                                 <option value="success">Hijau</option>
