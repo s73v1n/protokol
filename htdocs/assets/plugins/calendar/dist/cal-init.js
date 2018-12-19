@@ -65,7 +65,7 @@
             var form = $("<form></form>");
             form.append("<div class='form-group'></div>");
             form.find(".form-group")
-                .append("<div class='form-group'><label class='control-label'>Event Name</label><input class='form-control' placeholder='Tambah Kegiatan' type='text' name='title'/></div>")
+                .append("<div class='form-group'><label class='control-label'>Event Name</label><input class='form-control' placeholder='Tambah Kegiatan' type='text' name='judul'/></div>")
                 .append("<div class='form-group'><label class='control-label'>Event Name</label><input class='form-control' placeholder='awal' type='text' name='beginning'/></div>")
 				.append("<div class='form-group'><label class='control-label'>Event Name</label><input class='form-control' placeholder='akhir' type='text' name='ending'/></div>")
 				.append("<div class='form-group'><label class='control-label'>Category</label><select class='form-control' name='category'></select></div>")
@@ -81,7 +81,7 @@
                 form.submit();
             });
             $this.$modal.find('form').on('submit', function () {
-                var title = form.find("input[name='title']").val();
+                var title = form.find("input[name='judul']").val();
                 var beginning = form.find("input[name='beginning']").val();
                 var ending = form.find("input[name='ending']").val();
                 var categoryClass = form.find("select[name='category'] option:checked").val();
