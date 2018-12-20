@@ -8,6 +8,9 @@ $this->load->view('template/head');
 $this->load->view('template/topbar');
 $this->load->view('template/sidebar');
 ?>
+<?php
+$tanggal = date('D d-m-Y');
+?>
 
 
         
@@ -114,8 +117,8 @@ $this->load->view('template/sidebar');
                         <div class="card">
                             <img class="" src="<?php echo base_url('/assets/images/background/weatherbg.jpg')?>" alt="Card image cap">
                             <div class="card-img-overlay" style="height:110px;">
-                                <h3 class="card-title text-white m-b-0 dl">New Delhi</h3>
-                                <small class="card-text text-white font-light">Sunday 15 march</small>
+                                <h3 class="card-title text-white m-b-0 dl">Jambi</h3>
+                                <small class="card-text text-white font-light"><?php echo $tanggal</small>
                             </div>
                             <div class="card-body weather-small">
                                 <div class="row">
