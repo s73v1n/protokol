@@ -10,7 +10,7 @@ $this->load->view('template/sidebar');
 ?>
 <?php
 setlocale(LC_ALL, 'IND');
-$tanggal = date('D d-m-Y');
+$tanggal = date('%D d-m-Y');
 ?>
 
 
