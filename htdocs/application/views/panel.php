@@ -10,7 +10,7 @@ $this->load->view('template/sidebar');
 ?>
 <?php
 setlocale (LC_TIME, 'id_ID');
-$tanggal = strftime( "%A, %d %B %Y %H:%M", time());
+$tanggal = strftime( "%A, %d %B %Y", time());
 ?>
 
 
