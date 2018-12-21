@@ -81,7 +81,7 @@ $tanggal = strftime( "%A, %d %B %Y", time());
                                 </div>
                                 <div class="row">
                                     <div class="col-4 align-self-center">
-                                        <h2 class="font-light text-white">48 Kegiatan</h2>
+                                        <h2 class="font-light text-white">48 Agenda</h2>
                                     </div>
                                     <div class="col-8 p-t-10 p-b-20 align-self-center">
                                         <div class="usage chartist-chart" style="height:65px"></div>
