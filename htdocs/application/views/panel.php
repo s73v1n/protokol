@@ -81,7 +81,7 @@ $tanggal = strftime( "%A, %d %B %Y", time());
                                 </div>
                                 <div class="row">
                                     <div class="col-4 align-self-center">
-                                        <h2 class="font-light text-white">50 GB</h2>
+                                        <h2 class="font-light text-white">48 Kegiatan</h2>
                                     </div>
                                     <div class="col-8 p-t-10 p-b-20 align-self-center">
                                         <div class="usage chartist-chart" style="height:65px"></div>
@@ -99,8 +99,8 @@ $tanggal = strftime( "%A, %d %B %Y", time());
                                     <div class="m-r-20 align-self-center">
                                         <h1 class="text-white"><i class="icon-cloud-download"></i></h1></div>
                                     <div>
-                                        <h3 class="card-title">Download count</h3>
-                                        <h6 class="card-subtitle">March  2017</h6> </div>
+                                        <h3 class="card-title">Jumlah Kegiatan</h3>
+                                        <h6 class="card-subtitle">Tahun  2018</h6> </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-4 align-self-center">
