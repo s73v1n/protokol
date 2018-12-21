@@ -9,6 +9,8 @@ $this->load->view('template/topbar');
 $this->load->view('template/sidebar');
 ?>
 <?php
+date_default_timezone_set('Asia/Jakarta');
+setlocale(LC_TIME, "id_ID");
 $tanggal = strftime( "%A, %d %B %Y", time());
 ?>
 
