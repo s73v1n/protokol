@@ -76,8 +76,8 @@ $tanggal = strftime( "%A, %d %B %Y", time());
                                     <div class="m-r-20 align-self-center">
                                         <h1 class="text-white"><i class="ti-pie-chart"></i></h1></div>
                                     <div>
-                                        <h3 class="card-title">Bandwidth usage</h3>
-                                        <h6 class="card-subtitle">March  2017</h6> </div>
+                                        <h3 class="card-title">Jumlah Kegiatan</h3>
+                                        <h6 class="card-subtitle"><?php echo strftime( "%B %Y", time());?></h6> </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-4 align-self-center">
