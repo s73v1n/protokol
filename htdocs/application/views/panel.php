@@ -9,7 +9,6 @@ $this->load->view('template/topbar');
 $this->load->view('template/sidebar');
 ?>
 <?php
-setlocale (LC_TIME, 'id_ID');
 $tanggal = strftime( "%A, %d %B %Y", time());
 ?>
 
