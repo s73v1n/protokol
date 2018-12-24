@@ -223,13 +223,21 @@ $tanggal = strftime( "%A, %d %B %Y", time());
         <!-- ============================================================== -->
         <!-- End Page wrapper  -->
         <!-- ============================================================== -->
-    </div>
+    
     <!-- ============================================================== -->
     <!-- End Wrapper -->
     <!-- ============================================================== -->
-   <?php foreach($js_files as $file): ?>
-        <script src="<?php echo $file; ?>"></script>
-    <?php endforeach; ?> 
+
 <?php
 $this->load->view('template/footer');
+?>
+<?php 
+foreach($js_files as $file): 
+?>
+	<script src="<?php echo $file; ?>"></script>
+<?php 
+endforeach; 
+?> 
+<?php
+$this->load->view('template/end');
 ?>
