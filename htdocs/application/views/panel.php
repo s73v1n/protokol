@@ -67,53 +67,74 @@ $tanggal = strftime( "%A, %d %B %Y", time());
                 <!-- ============================================================== -->
                 <!-- Row -->
 
-                <div class="row">
+               
                     <!-- Column -->
-                    <div class="col-lg-4 col-md-4">
-                        <div class="card card-inverse card-primary">
+					                <div class="row">
+                    <!-- Column -->
+                    <div class="col-lg-8">
+                        <div class="card">
                             <div class="card-body">
-                                <div class="d-flex">
-                                    <div class="m-r-20 align-self-center">
-                                        <h1 class="text-white"><i class="ti-pie-chart"></i></h1></div>
-                                    <div>
-                                        <h3 class="card-title">Jumlah Kegiatan</h3>
-                                        <h6 class="card-subtitle"><?php echo strftime( "%B %Y", time());?></h6> </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-4 align-self-center">
-                                        <h2 class="font-light text-white">48 Agenda</h2>
+                                <div class="d-flex no-block align-items-center">
+                                    <h4 class="card-title">Total Revenue</h4>
+                                    <div class="ml-auto">
+                                        <ul class="list-inline">
+                                            <li>
+                                                <h6 class="text-muted"><i class="fa fa-circle m-r-5" style="color:#51bdff"></i>2015</h6>
+                                            </li>
+                                            <li>
+                                                <h6 class="text-muted"><i class="fa fa-circle m-r-5" style="color:#11a0f8"></i>2016</h6>
+                                            </li>
+                                            <li>
+                                                <h6 class="text-muted"><i class="fa fa-circle m-r-5 text-info"></i>2017</h6>
+                                            </li>
+                                        </ul>
                                     </div>
-                                    <div class="col-8 p-t-10 p-b-20 align-self-center">
-                                        <div class="usage chartist-chart" style="height:65px"></div>
+                                </div>
+                                <div class="total-sales" style="height: 365px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    <div class="col-lg-4">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Sales Prediction</h4>
+                                        <div class="d-flex flex-row">
+                                            <div class="align-self-center">
+                                                <span class="display-6 text-primary">$3528</span>
+                                                <h6 class="text-muted">10% Increased</h6>
+                                                <h5>(150-165 Sales)</h5>
+                                            </div>
+                                            <div class="ml-auto">
+                                                <div id="gauge-chart" style=" width:150px; height:150px;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Sales Difference</h4>
+                                        <div class="d-flex flex-row">
+                                            <div class="align-self-center">
+                                                <span class="display-6 text-success">$4316</span>
+                                                <h6 class="text-muted">10% Increased</h6>
+                                                <h5>(150-165 Sales)</h5>
+                                            </div>
+                                            <div class="ml-auto">
+                                                <div class="ct-chart" style="width:120px; height: 120px;"></div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- Column -->
-                    <!-- Column -->
-                    <div class="col-lg-4 col-md-4">
-                        <div class="card card-inverse card-success">
-                            <div class="card-body">
-                                <div class="d-flex">
-                                    <div class="m-r-20 align-self-center">
-                                        <h1 class="text-white"><i class="icon-cloud-download"></i></h1></div>
-                                    <div>
-                                        <h3 class="card-title">Jumlah Kegiatan</h3>
-                                        <h6 class="card-subtitle">Tahun  2018</h6> </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-4 align-self-center">
-                                        <h2 class="font-light text-white">35487</h2>
-                                    </div>
-                                    <div class="col-8 p-t-10 p-b-20 text-right">
-                                        <div class="spark-count" style="height:65px"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Column -->
+                </div>
                     <!-- Column -->
                     <div class="col-lg-4 col-md-4">
                         <div class="card">
