@@ -69,66 +69,59 @@ $tanggal = strftime( "%A, %d %B %Y", time());
 
                
                     <!-- Column -->
-					                <div class="row">
+				<div class="row">
                     <!-- Column -->
-                    <div class="col-lg-8">
+                      <div class="col-lg-4 col-md-12">
                         <div class="card">
                             <div class="card-body">
-                                <div class="d-flex no-block align-items-center">
-                                    <h4 class="card-title">Total Revenue</h4>
-                                    <div class="ml-auto">
-                                        <ul class="list-inline">
-                                            <li>
-                                                <h6 class="text-muted"><i class="fa fa-circle m-r-5" style="color:#51bdff"></i>2015</h6>
-                                            </li>
-                                            <li>
-                                                <h6 class="text-muted"><i class="fa fa-circle m-r-5" style="color:#11a0f8"></i>2016</h6>
-                                            </li>
-                                            <li>
-                                                <h6 class="text-muted"><i class="fa fa-circle m-r-5 text-info"></i>2017</h6>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                <h4 class="card-title">Sales Overview</h4>
+                                <h6 class="card-subtitle">Ample Admin Vs Pixel Admin</h6>
+                                <div class="amp-pxl" style="height: 300px;"></div>
+                                <div class="text-center">
+                                    <ul class="list-inline">
+                                        <li>
+                                            <h6 class="text-muted text-success"><i class="fa fa-circle font-10 m-r-10 "></i>Ample</h6> </li>
+                                        <li>
+                                            <h6 class="text-muted  text-info"><i class="fa fa-circle font-10 m-r-10"></i>Pixel</h6> </li>
+                                    </ul>
                                 </div>
-                                <div class="total-sales" style="height: 365px;"></div>
                             </div>
                         </div>
                     </div>
                     <!-- Column -->
-                    <div class="col-lg-4">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h4 class="card-title">Sales Prediction</h4>
-                                        <div class="d-flex flex-row">
-                                            <div class="align-self-center">
-                                                <span class="display-6 text-primary">$3528</span>
-                                                <h6 class="text-muted">10% Increased</h6>
-                                                <h5>(150-165 Sales)</h5>
-                                            </div>
-                                            <div class="ml-auto">
-                                                <div id="gauge-chart" style=" width:150px; height:150px;"></div>
-                                            </div>
-                                        </div>
-                                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Newsletter Campaign</h4>
+                                <h6 class="card-subtitle">Overview of Newsletter Campaign</h6>
+                                <div class="campaign2 ct-charts" style="height: 300px;"></div>
+                                <div class="text-center">
+                                    <ul class="list-inline">
+                                        <li>
+                                            <h6 class="text-muted text-success"><i class="fa fa-circle font-10 m-r-10 "></i>Open Rate</h6> </li>
+                                        <li>
+                                            <h6 class="text-muted  text-info"><i class="fa fa-circle font-10 m-r-10"></i>Recurring</h6> </li>
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="col-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h4 class="card-title">Sales Difference</h4>
-                                        <div class="d-flex flex-row">
-                                            <div class="align-self-center">
-                                                <span class="display-6 text-success">$4316</span>
-                                                <h6 class="text-muted">10% Increased</h6>
-                                                <h5>(150-165 Sales)</h5>
-                                            </div>
-                                            <div class="ml-auto">
-                                                <div class="ct-chart" style="width:120px; height: 120px;"></div>
-                                            </div>
-                                        </div>
-                                    </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    <div class="col-lg-4 col-md-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Current Visitors</h4>
+                                <h6 class="card-subtitle">Different Devices Used to Visit</h6>
+                                <div id="usa" style="height: 300px"></div>
+                                <div class="text-center">
+                                    <ul class="list-inline">
+                                        <li>
+                                            <h6 class="text-success"><i class="fa fa-circle font-10 m-r-10 "></i>Valley</h6> </li>
+                                        <li>
+                                            <h6 class="text-info"><i class="fa fa-circle font-10 m-r-10"></i>Newyork</h6> </li>
+                                        <li>
+                                            <h6 class="text-danger"><i class="fa fa-circle font-10 m-r-10"></i>Kansas</h6> </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
