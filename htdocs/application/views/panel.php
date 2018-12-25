@@ -74,8 +74,8 @@ $tanggal = strftime( "%A, %d %B %Y", time());
                       <div class="col-lg-4 col-md-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Sales Overview</h4>
-                                <h6 class="card-subtitle">Ample Admin Vs Pixel Admin</h6>
+                                <h4 class="card-title">Kegiatan</h4>
+                                <h6 class="card-subtitle"><?php echo $tanggal?></h6>
                                 <div class="amp-pxl" style="height: 300px;"></div>
                                 <div class="text-center">
                                     <ul class="list-inline">
