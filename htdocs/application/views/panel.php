@@ -79,7 +79,7 @@ $besok = strftime( "%A, %d %B %Y", strtotime("+1 day"));
                             <div class="message-box">
                                 <div class="message-widget message-scroll">
                                     <!-- Message -->
-                                    <a href="#">
+                                    <a data-toggle="modal" data-target="#myModal">
                                             <div class="mail-contnet">
                                             <h5>Gedung Diklat</h5> <span class="mail-desc">Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been.</span> <span class="time">9:30 AM</span> </div>
                                     </a>
