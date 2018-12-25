@@ -235,32 +235,7 @@ $lusa = strftime( "%A, %d %B %Y", strtotime("+2 day"));
                     <!-- Column -->
                 </div>
                     <!-- Column -->
-                    <div class="col-lg-4 col-md-4">
-                        <div class="card">
-                            <img class="" src="<?php echo base_url('/assets/images/background/weatherbg.jpg')?>" alt="Card image cap">
-                            <div class="card-img-overlay" style="height:110px;">
-                                <h3 class="card-title text-white m-b-0 dl">Jambi</h3>
-                                <small class="card-text text-white font-light"><?php echo $tanggal?></small>
-                            </div>
-                            <div class="card-body weather-small">
-                                <div class="row">
-                                    <div class="col-8 b-r align-self-center">
-                                        <div class="d-flex">
-                                            <div class="display-6 text-info"><i class="wi wi-day-rain-wind"></i></div>
-                                            <div class="m-l-20">
-                                                <h1 class="font-light text-info m-b-0">32<sup>0</sup></h1>
-                                                <small>Sunny Rainy day</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-4 text-center">
-                                        <h1 class="font-light m-b-0">25<sup>0</sup></h1>
-                                        <small>Tonight</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
                     <!-- Column -->
                 </div>
                 <!-- Row -->
