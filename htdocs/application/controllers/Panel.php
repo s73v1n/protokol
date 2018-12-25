@@ -14,7 +14,7 @@ class Panel extends CI_Controller {
 	public function _example_output($output = null)
 	{
 		
-		$this->load->view('panel.php',(array)$output);
+		$this->load->view('dashboard.php',(array)$output);
 	}
 
 	
@@ -58,11 +58,8 @@ class Panel extends CI_Controller {
 		public function harga()
 	{
 			$crud = new grocery_CRUD();
-
 			$crud->set_table('tbl_giat');
-
 			$output = $crud->render();
-
 			$this->_example_output($output);
 	}
 	
