@@ -20,7 +20,6 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$data['footer'] = '@2018 Protokol Pemerintah Kota Jambi';
-		$this->load->view('blank',$data);
+		$this->load->view('dashboard');
 	}
 }
