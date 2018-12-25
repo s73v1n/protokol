@@ -19,7 +19,9 @@
     <link href="<?php echo base_url('/assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css')?>" rel="stylesheet">
     <!--This page css - Morris CSS -->
     <link href="<?php echo base_url('/assets/plugins/c3-master/c3.min.css')?>" rel="stylesheet">
-    <!-- Custom CSS -->
+    <!-- Vector CSS -->
+    <link href="<?php echo base_url('/assets/plugins/vectormap/jquery-jvectormap-2.0.2.css')?>" rel="stylesheet" />
+	<!-- Custom CSS -->
     <link href="<?php echo base_url('/assets/horizontal/css/style.css')?>" rel="stylesheet">
     <!-- You can change the theme colors from here -->
     <link href="<?php echo base_url('/assets/horizontal/css/colors/blue.css')?>" id="theme" rel="stylesheet">
