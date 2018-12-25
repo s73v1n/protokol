@@ -76,15 +76,17 @@ $tanggal = strftime( "%A, %d %B %Y", time());
                             <div class="card-body">
                                 <h4 class="card-title">Kegiatan</h4>
                                 <h6 class="card-subtitle"><?php echo $tanggal?></h6>
-                                <div class="amp-pxl" style="height: 300px;"></div>
-                                <div class="text-center">
-                                    <ul class="list-inline">
-                                        <li>
-                                            <h6 class="text-muted text-success"><i class="fa fa-circle font-10 m-r-10 "></i>Ample</h6> </li>
-                                        <li>
-                                            <h6 class="text-muted  text-info"><i class="fa fa-circle font-10 m-r-10"></i>Pixel</h6> </li>
-                                    </ul>
+                                <div class="col-md-2 row">
+                                    <select id="sortingField" class="custom-select form-control input-sm m-b-10">
+                                        <option>Name</option>
+                                        <option>Age</option>
+                                        <option>Address</option>
+                                        <option>Country</option>
+                                        <option>Married</option>
+                                    </select>
                                 </div>
+                                <div id="exampleSorting"></div>
+                               
                             </div>
                         </div>
                     </div>
