@@ -84,6 +84,16 @@ class Examples extends CI_Controller {
 
 			$this->_example_output($output);
 	}
+	public function customers_management()
+	{
+			$crud = new grocery_CRUD();
+
+			$crud->set_table('tbl_giat');
+
+			$output = $crud->render();
+
+			$this->_example_output($output);
+	}
 
 	public function orders_management()
 	{
