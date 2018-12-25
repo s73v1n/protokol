@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<?php 
-foreach($css_files as $file): ?>
+<?php
+$this->load->view('template/head');
+?>
+<?php foreach($css_files as $file): ?>
 	<link type="text/css" rel="stylesheet" href="<?php echo $file; ?>" />
 <?php endforeach; ?>
-</head>
+<?php
+$this->load->view('template/topbar');
+$this->load->view('template/sidebar');
+?>
 <body>
 	<div style='height:20px;'></div>  
     <div style="padding: 10px">
