@@ -13,8 +13,19 @@ $this->load->view('template/sidebar');
     <div style="padding: 10px">
 		<?php echo $output; ?>
     </div>
-    <?php foreach($js_files as $file): ?>
-        <script src="<?php echo $file; ?>"></script>
-    <?php endforeach; ?>
-</body>
-</html>
+<?php
+$this->load->view('template/footer');
+?>
+<?php 
+foreach($js_files as $file): 
+?>
+	<script src="<?php echo $file; ?>"></script>
+<?php 
+endforeach; 
+?>
+<?php
+$this->load->view('template/dashboard1_js');
+?> 
+<?php
+$this->load->view('template/end');
+?>
