@@ -55,6 +55,16 @@ class Panel extends CI_Controller {
 			$output = $crud->render();
 			$this->load->view('disposisi.php',(array)$output);
 	}
+		public function harga()
+	{
+			$crud = new grocery_CRUD();
+
+			$crud->set_table('tbl_giat');
+
+			$output = $crud->render();
+
+			$this->_example_output($output);
+	}
 	
 	
 }
