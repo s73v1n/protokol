@@ -71,24 +71,64 @@ $tanggal = strftime( "%A, %d %B %Y", time());
                     <!-- Column -->
 				<div class="row">
                     <!-- Column -->
-                      <div class="col-lg-4 col-md-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Kegiatan</h4>
-                                <h6 class="card-subtitle"><?php echo $tanggal?></h6>
-                                <div class="col-md-2 row">
-                                    <select id="sortingField" class="custom-select form-control input-sm m-b-10">
-                                        <option>Name</option>
-                                        <option>Age</option>
-                                        <option>Address</option>
-                                        <option>Country</option>
-                                        <option>Married</option>
-                                    </select>
+                    <div class="col-lg-4 col-md-12">
+						<div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Recent Messages</h4>
+                            <div class="message-box">
+                                <div class="message-widget message-scroll">
+                                    <!-- Message -->
+                                    <a href="#">
+                                        <div class="user-img"> <img src="../assets/images/users/1.jpg" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
+                                        <div class="mail-contnet">
+                                            <h5>Pavan kumar</h5> <span class="mail-desc">Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been.</span> <span class="time">9:30 AM</span> </div>
+                                    </a>
+                                    <!-- Message -->
+                                    <a href="#">
+                                        <div class="user-img"> <img src="../assets/images/users/2.jpg" alt="user" class="img-circle"> <span class="profile-status busy pull-right"></span> </div>
+                                        <div class="mail-contnet">
+                                            <h5>Sonu Nigam</h5> <span class="mail-desc">I've sung a song! See you at</span> <span class="time">9:10 AM</span> </div>
+                                    </a>
+                                    <!-- Message -->
+                                    <a href="#">
+                                        <div class="user-img"> <span class="round">A</span> <span class="profile-status away pull-right"></span> </div>
+                                        <div class="mail-contnet">
+                                            <h5>Arijit Sinh</h5> <span class="mail-desc">Simply dummy text of the printing and typesetting industry.</span> <span class="time">9:08 AM</span> </div>
+                                    </a>
+                                    <!-- Message -->
+                                    <a href="#">
+                                        <div class="user-img"> <img src="../assets/images/users/4.jpg" alt="user" class="img-circle"> <span class="profile-status offline pull-right"></span> </div>
+                                        <div class="mail-contnet">
+                                            <h5>Pavan kumar</h5> <span class="mail-desc">Just see the my admin!</span> <span class="time">9:02 AM</span> </div>
+                                    </a>
+                                    <!-- Message -->
+                                    <a href="#">
+                                        <div class="user-img"> <img src="../assets/images/users/1.jpg" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
+                                        <div class="mail-contnet">
+                                            <h5>Pavan kumar</h5> <span class="mail-desc">Welcome to the Elite Admin</span> <span class="time">9:30 AM</span> </div>
+                                    </a>
+                                    <!-- Message -->
+                                    <a href="#">
+                                        <div class="user-img"> <img src="../assets/images/users/2.jpg" alt="user" class="img-circle"> <span class="profile-status busy pull-right"></span> </div>
+                                        <div class="mail-contnet">
+                                            <h5>Sonu Nigam</h5> <span class="mail-desc">I've sung a song! See you at</span> <span class="time">9:10 AM</span> </div>
+                                    </a>
+                                    <!-- Message -->
+                                    <a href="#">
+                                        <div class="user-img"> <img src="../assets/images/users/3.jpg" alt="user" class="img-circle"> <span class="profile-status away pull-right"></span> </div>
+                                        <div class="mail-contnet">
+                                            <h5>Arijit Sinh</h5> <span class="mail-desc">I am a singer!</span> <span class="time">9:08 AM</span> </div>
+                                    </a>
+                                    <!-- Message -->
+                                    <a href="#">
+                                        <div class="user-img"> <img src="../assets/images/users/4.jpg" alt="user" class="img-circle"> <span class="profile-status offline pull-right"></span> </div>
+                                        <div class="mail-contnet">
+                                            <h5>Pavan kumar</h5> <span class="mail-desc">Just see the my admin!</span> <span class="time">9:02 AM</span> </div>
+                                    </a>
                                 </div>
-                                <div id="exampleSorting"></div>
-                               
                             </div>
                         </div>
+                    </div>
                     </div>
                     <!-- Column -->
                     <div class="col-lg-4 col-md-12">
