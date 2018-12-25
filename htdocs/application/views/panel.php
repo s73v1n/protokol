@@ -81,7 +81,7 @@ $besok = strftime( "%A, %d %B %Y", strtotime("+1 day"));
                                     <!-- Message -->
                                     <a href="#">
                                             <div class="mail-contnet">
-                                            <h5>Pavan kumar</h5> <span class="mail-desc">Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been.</span> <span class="time">9:30 AM</span> </div>
+                                            <h5>Gedung Diklat</h5> <span class="mail-desc">Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been.</span> <span class="time">9:30 AM</span> </div>
                                     </a>
                                     <!-- Message -->
                                     <a href="#">
