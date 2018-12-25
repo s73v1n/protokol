@@ -84,7 +84,7 @@ class Examples extends CI_Controller {
 
 			$this->_example_output($output);
 	}
-	public function customers_management()
+	public function harga()
 	{
 			$crud = new grocery_CRUD();
 
