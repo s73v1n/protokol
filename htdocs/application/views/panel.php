@@ -80,8 +80,7 @@ $besok = strftime( "%A, %d %B %Y", strtotime("+1 day"));
                                 <div class="message-widget message-scroll">
                                     <!-- Message -->
                                     <a href="#">
-                                        <div class="user-img"> <img src="../assets/images/users/1.jpg" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
-                                        <div class="mail-contnet">
+                                            <div class="mail-contnet">
                                             <h5>Pavan kumar</h5> <span class="mail-desc">Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been.</span> <span class="time">9:30 AM</span> </div>
                                     </a>
                                     <!-- Message -->
