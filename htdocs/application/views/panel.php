@@ -216,7 +216,7 @@ $lusa = strftime( "%A, %d %B %Y", strtotime("+2 day"));
                     <div class="col-lg-4 col-md-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Current Visitors</h4>
+                                <h4 class="card-title"><?php echo $lusa ?></h4>
                                 <h6 class="card-subtitle">Different Devices Used to Visit</h6>
                                 <div id="usa" style="height: 300px"></div>
                                 <div class="text-center">
