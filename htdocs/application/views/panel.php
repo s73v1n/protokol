@@ -13,6 +13,7 @@ date_default_timezone_set('Asia/Jakarta');
 setlocale(LC_TIME, "id_ID.utf8");
 $tanggal = strftime( "%A, %d %B %Y", time());
 $besok = strftime( "%A, %d %B %Y", strtotime("+1 day"));
+$lusa = strftime( "%A, %d %B %Y", strtotime("+2 day"));
 ?>
 
 
