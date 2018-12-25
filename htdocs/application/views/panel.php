@@ -74,7 +74,7 @@ $tanggal = strftime( "%A, %d %B %Y", time());
                     <div class="col-lg-4 col-md-12">
 						<div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">Recent Messages</h4>
+                            <h4 class="card-title"><?php echo $tanggal ?></h4>
                             <div class="message-box">
                                 <div class="message-widget message-scroll">
                                     <!-- Message -->
