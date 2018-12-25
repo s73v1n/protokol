@@ -237,7 +237,7 @@ $lusa = strftime( "%A, %d %B %Y", strtotime("+2 day"));
                     <!-- Column -->
 
                     <!-- Column -->
-                </div>
+                
                 <!-- Row -->
                 <div style="padding: 10px">
 					<?php echo $output; ?>
