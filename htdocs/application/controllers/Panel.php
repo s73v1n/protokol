@@ -49,7 +49,9 @@ class Panel extends CI_Controller {
 	}
 		public function all_agenda()
 	{
-			$data = 
+			$data = $this->Dashboard_model->get_all();
+			$data = array();
+			print_r $data();
 	}
 	
 	
