@@ -328,7 +328,7 @@
         <!-- Left Sidebar - style you can find in sidebar.scss  -->
         <!-- ============================================================== -->
 <?php
-$this->load->view('template/sidebar');
+$this->load->view('template/menu');
 ?>      
         <!-- ============================================================== -->
         <!-- End Left Sidebar - style you can find in sidebar.scss  -->
