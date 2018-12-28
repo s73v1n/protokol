@@ -22,16 +22,16 @@
                         <!-- Logo icon --><b>
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             <!-- Dark Logo icon -->
-                            <img src="<?php echo base_url('/assets/images/logo-icon.png')?>" alt="homepage" class="dark-logo" />
+                            <img src="<?php echo site_url('/assets/images/logo-icon.png')?>" alt="homepage" class="dark-logo" />
                             <!-- Light Logo icon -->
-                            <img src="<?php echo base_url('/assets/images/logo-light-icon.png')?>" alt="homepage" class="light-logo" />
+                            <img src="<?php echo site_url('/assets/images/logo-light-icon.png')?>" alt="homepage" class="light-logo" />
                         </b>
                         <!--End Logo icon -->
                         <!-- Logo text --><span>
                          <!-- dark Logo text -->
-                         <img src="<?php echo base_url('/assets/images/logo-text.png')?>" alt="homepage" class="dark-logo" />
+                         <img src="<?php echo site_url('/assets/images/logo-text.png')?>" alt="homepage" class="dark-logo" />
                          <!-- Light Logo text -->    
-                         <img src="<?php echo base_url('/assets/images/logo-light-text.png')?>" class="light-logo" alt="homepage" /></span> </a>
+                         <img src="<?php echo site_url('/assets/images/logo-light-text.png')?>" class="light-logo" alt="homepage" /></span> </a>
                 </div>
                 <!-- ============================================================== -->
                 <!-- End Logo -->
@@ -127,25 +127,25 @@
                                         <div class="message-center">
                                             <!-- Message -->
                                             <a href="#">
-                                                <div class="user-img"> <img src="<?php echo base_url('/assets/images/users/1.jpg')?>" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
+                                                <div class="user-img"> <img src="<?php echo site_url('/assets/images/users/1.jpg')?>" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
                                                 <div class="mail-contnet">
                                                     <h5>Pavan kumar</h5> <span class="mail-desc">Just see the my admin!</span> <span class="time">9:30 AM</span> </div>
                                             </a>
                                             <!-- Message -->
                                             <a href="#">
-                                                <div class="user-img"> <img src="<?php echo base_url('/assets/images/users/2.jpg')?>" alt="user" class="img-circle"> <span class="profile-status busy pull-right"></span> </div>
+                                                <div class="user-img"> <img src="<?php echo site_url('/assets/images/users/2.jpg')?>" alt="user" class="img-circle"> <span class="profile-status busy pull-right"></span> </div>
                                                 <div class="mail-contnet">
                                                     <h5>Sonu Nigam</h5> <span class="mail-desc">I've sung a song! See you at</span> <span class="time">9:10 AM</span> </div>
                                             </a>
                                             <!-- Message -->
                                             <a href="#">
-                                                <div class="user-img"> <img src="<?php echo base_url('/assets/images/users/3.jpg')?>" alt="user" class="img-circle"> <span class="profile-status away pull-right"></span> </div>
+                                                <div class="user-img"> <img src="<?php echo site_url('/assets/images/users/3.jpg')?>" alt="user" class="img-circle"> <span class="profile-status away pull-right"></span> </div>
                                                 <div class="mail-contnet">
                                                     <h5>Arijit Sinh</h5> <span class="mail-desc">I am a singer!</span> <span class="time">9:08 AM</span> </div>
                                             </a>
                                             <!-- Message -->
                                             <a href="#">
-                                                <div class="user-img"> <img src="<?php echo base_url('/assets/images/users/4.jpg')?>" alt="user" class="img-circle"> <span class="profile-status offline pull-right"></span> </div>
+                                                <div class="user-img"> <img src="<?php echo site_url('/assets/images/users/4.jpg')?>" alt="user" class="img-circle"> <span class="profile-status offline pull-right"></span> </div>
                                                 <div class="mail-contnet">
                                                     <h5>Pavan kumar</h5> <span class="mail-desc">Just see the my admin!</span> <span class="time">9:02 AM</span> </div>
                                             </a>
@@ -169,7 +169,7 @@
                                 <ul class="dropdown-user">
                                     <li>
                                         <div class="dw-user-box">
-                                            <div class="u-img"><img src="<?php echo base_url('/assets/images/users/1.jpg')?>" alt="user"></div>
+                                            <div class="u-img"><img src="<?php echo site_url('/assets/images/users/1.jpg')?>" alt="user"></div>
                                             <div class="u-text">
                                                 <h4>Administrator</h4>
                                                 <p class="text-muted">varun@gmail.com</p><a href="profile.html" class="btn btn-rounded btn-danger btn-sm">View Profile</a></div>
