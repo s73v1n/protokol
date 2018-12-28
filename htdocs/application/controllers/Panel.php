@@ -25,7 +25,7 @@ class Panel extends CI_Controller {
 	public function agenda()
 	{
 			$crud = new grocery_CRUD();
-			//$crud->set_theme('bootstrap');
+			$crud->set_theme('bootstrap');
 			//$crud->unset_bootstrap();
 			//$crud->unset_jquery();
 			$crud->set_table('tbl_giat');
