@@ -20,7 +20,7 @@ class Panel extends CI_Controller {
 	
 	public function index()
 	{
-		$this->_example_output($output);
+		$this->load->view('dashboard');
 	}
 	public function agenda()
 	{
