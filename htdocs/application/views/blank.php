@@ -303,6 +303,59 @@ $this->load->view('template/menu');
                 <!-- Row -->
                 <div class="row">
                     <!-- Column -->
+                    <div class="col-lg-4 col-md-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title"><?php echo $tanggal?></h4>
+                                <h6 class="card-subtitle">Agenda Hari Ini</h6>
+                                <div class="message-box">
+									<div class="message-widget message-scroll">
+										<!--pesan-->
+									
+										<!--pesan-->
+									</div>								
+								</div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    <div class="col-lg-4 col-md-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title"><?php echo $besok?></h4>
+                                <h6 class="card-subtitle">Agenda Besok</h6>
+									<div class="message-box">
+										<div class="message-widget message-scroll">
+											<!--pesan-->
+									
+											<!--pesan-->
+										</div>								
+									</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    <div class="col-lg-4 col-md-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title"><?php echo $lusa?></h4>
+                                <h6 class="card-subtitle">Agenda Lusa</h6>
+									<div class="message-box">
+										<div class="message-widget message-scroll">
+											<!--pesan-->
+									
+											<!--pesan-->
+										</div>								
+									</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Row -->
+				<!-- Row -->
+                <div class="row">
+                    <!-- Column -->
                     <div class="col-md-6 col-lg-3">
                         <div class="card card-body">
                             <!-- Row -->
