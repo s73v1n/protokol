@@ -51,7 +51,7 @@ class Panel extends CI_Controller {
 	{
 			$data = $this->Dashboard_model->get_all();
 			$data = array();
-			print_r $data();
+			echo '<pre>'; print_r($data); echo '</pre>';
 	}
 	
 	
