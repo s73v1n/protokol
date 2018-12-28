@@ -31,9 +31,7 @@ $lusa = strftime( "%A, %d %B %Y", strtotime("+2 day"));
     <link href="<?php echo base_url('/assets/horizontal/css/style.css')?>" rel="stylesheet">
     <!-- You can change the theme colors from here -->
     <link href="<?php echo base_url('/assets/horizontal/css/colors/blue.css')?>" id="theme" rel="stylesheet">
-<?php foreach($css_files as $file): ?>
-<link type="text/css" rel="stylesheet" href="<?php echo $file; ?>" />
-<?php endforeach; ?>
+
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -348,9 +346,7 @@ $this->load->view('template/menu');
                     </div>
                 </div>
                 <!-- Row -->
-                <div style="padding: 10px">
-					<?php echo $output; ?>
-				</div>
+            
 
                 <!-- ============================================================== -->
                 <!-- End PAge Content -->
@@ -378,9 +374,7 @@ $this->load->view('template/menu');
     <!-- ============================================================== -->
     <!-- All Jquery -->
     <!-- ============================================================== -->
-<?php foreach($js_files as $file): ?>
-	<script src="<?php echo $file; ?>"></script>
-<?php endforeach; ?>
+
 	<!--<script src="<?php echo base_url('/assets/plugins/jquery/jquery.min.js')?>"></script>-->
     <!-- Bootstrap tether Core JavaScript -->
     <script src="<?php echo base_url('/assets/plugins/popper/popper.min.js')?>"></script>
