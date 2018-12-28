@@ -1,4 +1,11 @@
 <?php
+date_default_timezone_set('Asia/Jakarta');
+setlocale(LC_TIME, "id_ID.utf8");
+$tanggal = strftime( "%A, %d %B %Y", time());
+$besok = strftime( "%A, %d %B %Y", strtotime("+1 day"));
+$lusa = strftime( "%A, %d %B %Y", strtotime("+2 day"));
+?>
+<?php
 $this->load->view('template/header');
 ?>
 <!-- CUSTOM CSS-->
@@ -71,17 +78,16 @@ $this->load->view('template/menu');
                     <div class="col-lg-4 col-md-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Sales Overview</h4>
-                                <h6 class="card-subtitle">Ample Admin Vs Pixel Admin</h6>
-                                <div class="amp-pxl" style="height: 300px;"></div>
-                                <div class="text-center">
-                                    <ul class="list-inline">
-                                        <li>
-                                            <h6 class="text-muted text-success"><i class="fa fa-circle font-10 m-r-10 "></i>Ample</h6> </li>
-                                        <li>
-                                            <h6 class="text-muted  text-info"><i class="fa fa-circle font-10 m-r-10"></i>Pixel</h6> </li>
-                                    </ul>
-                                </div>
+                                <h4 class="card-title"><?php echo $tanggal?></h4>
+                                <h6 class="card-subtitle">Agenda Hari Ini</h6>
+                                <div class="message-box">
+									<div class="message-widget message-scroll">
+										<!--pesan-->
+									
+										<!--pesan-->
+									</div>								
+								</div>
+                               
                             </div>
                         </div>
                     </div>
@@ -89,17 +95,15 @@ $this->load->view('template/menu');
                     <div class="col-lg-4 col-md-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Newsletter Campaign</h4>
-                                <h6 class="card-subtitle">Overview of Newsletter Campaign</h6>
-                                <div class="campaign2 ct-charts" style="height: 300px;"></div>
-                                <div class="text-center">
-                                    <ul class="list-inline">
-                                        <li>
-                                            <h6 class="text-muted text-success"><i class="fa fa-circle font-10 m-r-10 "></i>Open Rate</h6> </li>
-                                        <li>
-                                            <h6 class="text-muted  text-info"><i class="fa fa-circle font-10 m-r-10"></i>Recurring</h6> </li>
-                                    </ul>
-                                </div>
+                                <h4 class="card-title"><?php echo $besok?></h4>
+                                <h6 class="card-subtitle">Agenda Besok</h6>
+									<div class="message-box">
+										<div class="message-widget message-scroll">
+											<!--pesan-->
+									
+											<!--pesan-->
+										</div>								
+									</div>
                             </div>
                         </div>
                     </div>
@@ -107,19 +111,15 @@ $this->load->view('template/menu');
                     <div class="col-lg-4 col-md-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Current Visitors</h4>
-                                <h6 class="card-subtitle">Different Devices Used to Visit</h6>
-                                <div id="usa" style="height: 300px"></div>
-                                <div class="text-center">
-                                    <ul class="list-inline">
-                                        <li>
-                                            <h6 class="text-success"><i class="fa fa-circle font-10 m-r-10 "></i>Valley</h6> </li>
-                                        <li>
-                                            <h6 class="text-info"><i class="fa fa-circle font-10 m-r-10"></i>Newyork</h6> </li>
-                                        <li>
-                                            <h6 class="text-danger"><i class="fa fa-circle font-10 m-r-10"></i>Kansas</h6> </li>
-                                    </ul>
-                                </div>
+                                <h4 class="card-title"><?php echo $lusa?></h4>
+                                <h6 class="card-subtitle">Agenda Lusa</h6>
+									<div class="message-box">
+										<div class="message-widget message-scroll">
+											<!--pesan-->
+									
+											<!--pesan-->
+										</div>								
+									</div>
                             </div>
                         </div>
                     </div>
