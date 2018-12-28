@@ -5,7 +5,7 @@ class Panel extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-
+		$this->load->model('Dashboard_model');
 		$this->load->database();
 		$this->load->helper('url');
 		$this->load->library('grocery_CRUD');
@@ -47,12 +47,9 @@ class Panel extends CI_Controller {
 			$output = $crud->render();
 			$this->load->view('disposisi.php',(array)$output);
 	}
-		public function harga()
+		public function all_agenda()
 	{
-			$crud = new grocery_CRUD();
-			$crud->set_table('tbl_giat');
-			$output = $crud->render();
-			$this->_example_output($output);
+			$data = 
 	}
 	
 	
