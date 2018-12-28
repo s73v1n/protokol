@@ -1,6 +1,9 @@
 <?php
 $this->load->view('template/header');
 ?>
+<!-- CUSTOM CSS-->
+
+<!---CUSTOM CSS-->
 </head>
 <body class="fix-header fix-sidebar card-no-border logo-center">
 <?php
@@ -61,74 +64,7 @@ $this->load->view('template/menu');
                 <!-- ============================================================== -->
                 <!-- Start Page Content -->
                 <!-- ============================================================== -->
-                <!-- Row -->
-                <div class="row">
-                    <!-- Column -->
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card card-body">
-                            <!-- Row -->
-                            <div class="row">
-                                <!-- Column -->
-                                <div class="col p-r-0 align-self-center">
-                                    <h2 class="font-light m-b-0">324</h2>
-                                    <h6 class="text-muted">New Clients</h6></div>
-                                <!-- Column -->
-                                <div class="col text-right align-self-center">
-                                    <div data-label="20%" class="css-bar m-b-0 css-bar-info css-bar-20"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Column -->
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card card-body">
-                            <!-- Row -->
-                            <div class="row">
-                                <!-- Column -->
-                                <div class="col p-r-0 align-self-center">
-                                    <h2 class="font-light m-b-0">2376</h2>
-                                    <h6 class="text-muted">Total Visits</h6></div>
-                                <!-- Column -->
-                                <div class="col text-right align-self-center">
-                                    <div data-label="30%" class="css-bar m-b-0 css-bar-success css-bar-20"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Column -->
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card card-body">
-                            <!-- Row -->
-                            <div class="row">
-                                <!-- Column -->
-                                <div class="col p-r-0 align-self-center">
-                                    <h2 class="font-light m-b-0">1795</h2>
-                                    <h6 class="text-muted">New Leads</h6></div>
-                                <!-- Column -->
-                                <div class="col text-right ">
-                                    <div data-label="40%" class="css-bar m-b-0 css-bar-primary css-bar-40"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Column -->
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card card-body">
-                            <!-- Row -->
-                            <div class="row">
-                                <!-- Column -->
-                                <div class="col p-r-0 align-self-center">
-                                    <h2 class="font-light m-b-0">36870</h2>
-                                    <h6 class="text-muted">Page Views</h6></div>
-                                <!-- Column -->
-                                <div class="col text-right align-self-center">
-                                    <div data-label="60%" class="css-bar m-b-0 css-bar-danger css-bar-60"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Row -->
+
                 <!-- Row -->
                 <div class="row">
                     <!-- Column -->
