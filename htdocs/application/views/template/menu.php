@@ -9,7 +9,7 @@
                             <a class="has-arrow" href="#" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Beranda </span></a>
                         </li>
 						<li>
-                            <a class="has-arrow" href="<?php echo base_url('panel/agenda')?>;" aria-expanded="false"><i class="mdi mdi-table"></i><span class="hide-menu">Tabulasi </span></a>
+                            <a class="has-arrow" href="#" aria-expanded="false"><i class="mdi mdi-table"></i><span class="hide-menu">Tabulasi </span></a>
                         </li>
                         <li>
                             <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-table"></i><span class="hide-menu">Kalender</span></a>
