@@ -18,8 +18,6 @@
     <link href="<?php echo base_url('/assets/plugins/chartist-js/dist/chartist-init.css')?>" rel="stylesheet">
     <link href="<?php echo base_url('/assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css')?>" rel="stylesheet">
     <link href="<?php echo base_url('/assets/plugins/css-chart/css-chart.css')?>" rel="stylesheet">
-    <!-- Vector CSS -->
-    <link href="<?php echo base_url('/assets/plugins/vectormap/jquery-jvectormap-2.0.2.css')?>" rel="stylesheet" />
     <!-- Custom CSS -->
     <link href="<?php echo base_url ('/assets/horizontal/css/style.css')?>" rel="stylesheet">
     <!-- You can change the theme colors from here -->
