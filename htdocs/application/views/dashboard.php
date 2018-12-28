@@ -230,12 +230,6 @@ $this->load->view('template/menu');
     <!-- ============================================================== -->
     <!-- This page plugins -->
     <!-- ============================================================== -->
-    <!-- chartist chart -->
-    <script src="<?php echo base_url('/assets/plugins/chartist-js/dist/chartist.min.js')?>"></script>
-    <script src="<?php echo base_url('/assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js')?>"></script>
-    <!-- Vector map JavaScript -->
-    <script src="<?php echo base_url('/assets/plugins/vectormap/jquery-jvectormap-2.0.2.min.js')?>"></script>
-    <script src="<?php echo base_url('/assets/plugins/vectormap/jquery-jvectormap-us-aea-en.js')?>"></script>
     <script src="<?php echo base_url('/assets/horizontal/js/dashboard3.js')?>"></script>
     <!-- ============================================================== -->
     <!-- Style switcher -->
