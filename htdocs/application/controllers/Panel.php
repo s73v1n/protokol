@@ -14,13 +14,13 @@ class Panel extends CI_Controller {
 	public function _example_output($output = null)
 	{
 		
-		$this->load->view('dashboard.php',(array)$output);
+		$this->load->view('dashboard.php',$output);
 	}
 
 	
 	public function index()
 	{
-		$this->_example_output((object)array('output' => '' ,'js_files' => array() , 'css_files' => array()));
+		$this->_example_output($output);
 	}
 	public function agenda()
 	{
