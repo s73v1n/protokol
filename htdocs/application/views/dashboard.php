@@ -9,7 +9,9 @@ $lusa = strftime( "%A, %d %B %Y", strtotime("+2 day"));
 $this->load->view('template/header');
 ?>
 <!-- CUSTOM CSS-->
-
+<?php foreach($css_files as $file): ?>
+	<link type="text/css" rel="stylesheet" href="<?php echo $file; ?>" />
+<?php endforeach; ?>
 <!---CUSTOM CSS-->
 </head>
 <body class="fix-header fix-sidebar card-no-border logo-center">
@@ -125,7 +127,9 @@ $this->load->view('template/menu');
                     </div>
                 </div>
                 <!-- Row -->
-
+                <div style="padding: 10px">
+					<?php echo $output; ?>
+				</div>
 
                 <!-- ============================================================== -->
                 <!-- End PAge Content -->
@@ -209,7 +213,10 @@ $this->load->view('template/menu');
     <!-- ============================================================== -->
     <!-- All Jquery -->
     <!-- ============================================================== -->
-    <script src="<?php echo base_url('/assets/plugins/jquery/jquery.min.js')?>"></script>
+<?php foreach($js_files as $file): ?>
+	<script src="<?php echo $file; ?>"></script>
+<?php endforeach; ?>
+	<script src="<?php echo base_url('/assets/plugins/jquery/jquery.min.js')?>"></script>
     <!-- Bootstrap tether Core JavaScript -->
     <script src="<?php echo base_url('/assets/plugins/popper/popper.min.js')?>"></script>
     <script src="<?php echo base_url('/assets/plugins/bootstrap/js/bootstrap.min.js')?>"></script>

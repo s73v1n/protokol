@@ -31,15 +31,7 @@ class Panel extends CI_Controller {
 			$crud->set_table('tbl_giat');
 			$crud->set_relation('disposisi','tbl_diposisi','perangkat');
 			$crud->set_language('indonesian');
-			//$crud->columns('customerName','contactLastName','phone','city','country','salesRepEmployeeNumber','creditLimit');
-			//$crud->display_as('salesRepEmployeeNumber','from Employeer')
-			//	 ->display_as('customerName','Name')
-			//	 ->display_as('contactLastName','Last Name');
-			//$crud->set_subject('agenda');
-			//$crud->set_relation('salesRepEmployeeNumber','employees','lastName');
-
 			$output = $crud->render();
-
 			$this->_example_output($output);
 	}
 	public function perangkat($output = null)
