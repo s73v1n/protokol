@@ -27,7 +27,9 @@ $lusa = strftime( "%A, %d %B %Y", strtotime("+2 day"));
     <link href="<?php echo base_url('/assets/plugins/css-chart/css-chart.css')?>" rel="stylesheet">
     <!-- Vector CSS -->
     <link href="<?php echo base_url('/assets/plugins/vectormap/jquery-jvectormap-2.0.2.css')?>" rel="stylesheet" />
-    <!-- Custom CSS -->
+    <!-- Calendar CSS -->
+    <link href="<?php echo base_url('/assets/plugins/calendar/dist/fullcalendar.css')?>" rel="stylesheet" />
+	<!-- Custom CSS -->
     <link href="<?php echo base_url('/assets/horizontal/css/style.css')?>" rel="stylesheet">
     <!-- You can change the theme colors from here -->
     <link href="<?php echo base_url('/assets/horizontal/css/colors/blue.css')?>" id="theme" rel="stylesheet">
@@ -343,7 +345,70 @@ $this->load->view('template/menu');
                     </div>
                 </div>
                 <!-- Row -->
-				
+				<!-- Row -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div id="calendar"></div>
+                                <!-- BEGIN MODAL -->
+                                <div class="modal fade none-border" id="my-event">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title"><strong>Add Event</strong></h4>
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            </div>
+                                            <div class="modal-body"></div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-white waves-effect" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-success save-event waves-effect waves-light">Create event</button>
+                                                <button type="button" class="btn btn-danger delete-event waves-effect waves-light" data-dismiss="modal">Delete</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Modal Add Category -->
+                                <div class="modal fade none-border" id="add-new-event">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title"><strong>Add</strong> a category</h4>
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <label class="control-label">Category Name</label>
+                                                            <input class="form-control form-white" placeholder="Enter name" type="text" name="category-name" />
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label class="control-label">Choose Category Color</label>
+                                                            <select class="form-control form-white" data-placeholder="Choose a color..." name="category-color">
+                                                                <option value="success">Success</option>
+                                                                <option value="danger">Danger</option>
+                                                                <option value="info">Info</option>
+                                                                <option value="primary">Primary</option>
+                                                                <option value="warning">Warning</option>
+                                                                <option value="inverse">Inverse</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-danger waves-effect waves-light save-category" data-dismiss="modal">Save</button>
+                                                <button type="button" class="btn btn-white waves-effect" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END MODAL -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <!-- Row -->
                 
                 
@@ -408,10 +473,11 @@ $this->load->view('template/menu');
     <!-- chartist chart -->
     <script src="<?php echo base_url('/assets/plugins/chartist-js/dist/chartist.min.js')?>"></script>
     <script src="<?php echo base_url('/assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js')?>"></script>
-    <!-- Vector map JavaScript -->
-    <script src="<?php echo base_url('/assets/plugins/vectormap/jquery-jvectormap-2.0.2.min.js')?>"></script>
-    <script src="<?php echo base_url('/assets/plugins/vectormap/jquery-jvectormap-us-aea-en.js')?>"></script>
-    <script src="<?php echo base_url('/assets/horizontal/js/dashboard3.js')?>"></script>
+    <!-- Calendar JavaScript -->
+    <script src="<?php echo base_url('/assets/plugins/moment/moment.js')?>"></script>
+    <script src="<?php echo base_url('/assets/plugins/calendar/dist/fullcalendar.min.js')?>"</script>
+    <script src="<?php echo base_url('/assets/plugins/calendar/dist/jquery.fullcalendar.js')?>"</script>
+    <script src="<?php echo base_url('/assets/plugins/calendar/dist/cal-init.js')?>"</script>
     <!-- ============================================================== -->
     <!-- Style switcher -->
     <!-- ============================================================== -->
