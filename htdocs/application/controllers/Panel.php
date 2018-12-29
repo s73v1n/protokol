@@ -45,7 +45,7 @@ class Panel extends CI_Controller {
 			return '<input type="text" class="colorpicker-default form-control" value="'.$value.'" name="color">';
 			});
 			$output = $crud->render();
-			$this->load->view('disposisi.php',(array)$output);
+			$this->_example_output($output);
 	}
 		public function all_agenda()
 	{
