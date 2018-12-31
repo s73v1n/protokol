@@ -47,7 +47,7 @@ class Panel extends CI_Controller {
 			$output = $crud->render();
 			$this->_example_output($output);
 	}
-		public function all_agenda()
+	public function all_agenda()
 	{
 			$data = $this->Dashboard_model->get_all();
 			echo '<pre>'; print_r($data); echo '</pre>';
