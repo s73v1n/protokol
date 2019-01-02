@@ -23,7 +23,13 @@ class Welcome extends CI_Controller {
 	}
 	public function all_agenda()
 	{
-		$data = $this->Dashboard_model->get_all();
+		$row = $this->Dashboard_model->get_all();
+		$data = array(
+			'kegiatan'	=>$row->kegiatan,
+			'mulai'		=>$row->start,
+			'disposisi'	=>$row->disposisi
+		
+		);
 		echo '<pre>'; print_r($data); echo '</pre>';
 	}
 }
