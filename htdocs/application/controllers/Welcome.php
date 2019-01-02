@@ -24,12 +24,13 @@ class Welcome extends CI_Controller {
 	public function all_agenda()
 	{
 		$row = $this->Dashboard_model->get_all();
+		$arrlength = count($row);
 		$data = array(
 			'kegiatan'	=>$row->kegiatan,
 			'mulai'		=>$row->start,
 			'disposisi'	=>$row->disposisi
 		
 		);
-		echo '<pre>'; print_r($data); echo '</pre>';
+		echo '<pre>'; print_r($row); echo '</pre>';
 	}
 }
