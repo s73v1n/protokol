@@ -313,9 +313,9 @@ $this->load->view('template/menu');
                                         </a>
 										<a href="#">
 											    <ul>
-													<?php foreach ($dashboard as $item):?>
-													<li><?php echo $item['disposisi'];?></li>
-													<?php endforeach;?>
+													<
+													<li><?php echo $dashboard['disposisi'];?></li>
+													
 												</ul>
                                         </a>
 										<!--pesan-->
