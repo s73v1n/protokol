@@ -306,9 +306,9 @@ $this->load->view('template/menu');
 										<a href="#">
 												<div class="mail-contnet">
 												<?php foreach ($dashboard as $data){?>
-                                                <h5><?php echo $data->disposisi?></h5> 
-												<span class="mail-desc"><?php echo $data->kegiatan?></span> 
-												<span class="time"><?php echo $data->start?></span> </div>
+                                                <h5><?php echo $data['disposisi']?></h5> 
+												<span class="mail-desc"><?php echo $data['kegiatan']?></span> 
+												<span class="time"><?php echo $data['start']?></span> </div>
 												<?php}?>
                                         </a>
 										
