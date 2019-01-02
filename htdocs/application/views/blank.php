@@ -307,8 +307,10 @@ $this->load->view('template/menu');
                                         </a>
 										<a href="#">
 											    <ul>
-													<
-													<li><?php echo $dashboard;?></li>
+													<?php foreach ($agenda as $giat){
+														print_r($giat['kegiatan']);
+													}?>
+													<?php endforeach?>
 													
 												</ul>
                                         </a>
