@@ -25,7 +25,7 @@ class Welcome extends CI_Controller {
 	}
 	public function all_agenda()
 	{
-		$row['agenda'] = array('First Object', 'Second Object', 'Third Object');
+		$row['agenda'] = $this->Dashboard_model->get_all();
 		$arrlength = count($row);
 
 		echo '<pre>'; print_r($row); echo '</pre>';
