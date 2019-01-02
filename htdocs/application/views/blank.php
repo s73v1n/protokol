@@ -303,10 +303,13 @@ $this->load->view('template/menu');
                                 <div class="message-box">
 									<div class="message-widget message-scroll">
 										<!--pesan-->
-										<div class="card-body">
-											<h6 class="card-title"><?php echo $mulai?></h6>
-											<p class="card-text"><?php echo $kegiatan?></p>
-										</div>
+										<a href="#">
+												<div class="mail-contnet">
+                                                <h5><?php echo $disposisi?></h5> 
+												<span class="mail-desc"><?php echo $kegiatan?></span> 
+												<span class="time"><?php echo $mulai?></span> </div>
+                                        </a>
+										
 										<!--pesan-->
 									</div>								
 								</div>
