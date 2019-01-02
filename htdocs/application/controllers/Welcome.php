@@ -15,9 +15,9 @@ class Welcome extends CI_Controller {
 		date_default_timezone_set('Asia/Jakarta');
 		setlocale(LC_TIME, "id_ID.utf8");
 		$data = array(
-				'tanggal' => strftime( "%A, %d %B %Y", time());
-				'besok' = strftime( "%A, %d %B %Y", strtotime("+1 day"));
-				'lusa' = strftime( "%A, %d %B %Y", strtotime("+2 day"));
+				'tanggal' => strftime( "%A, %d %B %Y", time()),
+				'besok' => strftime( "%A, %d %B %Y", strtotime("+1 day")),
+				'lusa' => strftime( "%A, %d %B %Y", strtotime("+2 day")),
 		);
 		
 		$this->load->view('blank',$data);
