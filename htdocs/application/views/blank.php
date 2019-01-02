@@ -314,7 +314,7 @@ $this->load->view('template/menu');
 										<a href="#">
 											    <ul>
 													<
-													<li><?php echo $dashboard['disposisi'];?></li>
+													<li><?php echo $dashboard;?></li>
 													
 												</ul>
                                         </a>
