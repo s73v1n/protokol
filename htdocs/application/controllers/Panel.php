@@ -50,6 +50,7 @@ class Panel extends CI_Controller {
 	public function all_agenda()
 	{
 			$data = $this->Dashboard_model->get_all();
+			
 			echo '<pre>'; print_r($data); echo '</pre>';
 	}
 	
