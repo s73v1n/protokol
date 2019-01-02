@@ -15,7 +15,7 @@ class Welcome extends CI_Controller {
 		$row = $this->Dashboard_model->get_all();
 		$data = array(
 			'kegiatan'	=>$row->kegiatan,
-			'mulai'		=>$row->mulai
+			'start'		=>$row->mulai
 		
 		);
 		$this->load->view('blank',$data);
