@@ -7,7 +7,7 @@ class Dashboard_model extends CI_Model {
 		$this->db->from('tbl_giat');
 		$this->db->join('tbl_diposisi', 'tbl_diposisi.id = tbl_giat.disposisi');
 		$query = $this->db->get();
-		return $query->result_array();
+		return $query->row();
 	}
 
 }
