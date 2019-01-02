@@ -306,7 +306,6 @@ $this->load->view('template/menu');
 										<div class="card-body">
 											<h4 class="card-title"><?php echo $mulai?></h4>
 											<p class="card-text"><?php echo $kegiatan?></p>
-											<a href="#" class="btn btn-primary">Go somewhere</a>
 										</div>
 										<!--pesan-->
 									</div>								
