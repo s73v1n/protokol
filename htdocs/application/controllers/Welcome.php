@@ -12,7 +12,7 @@ class Welcome extends CI_Controller {
 
 	public function index()
 	{
-		$data['dashboard'] = 'data';
+		$data['dashboard'] = array ('disposisi'=>'data');
 		$this->load->view('blank',$data);
 	}
 	public function all_agenda()
