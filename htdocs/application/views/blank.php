@@ -310,7 +310,7 @@ $this->load->view('template/menu');
 													<?php foreach ($agenda as $giat){
 														print_r($giat['kegiatan']);
 													}?>
-													<?php endforeach?>
+													
 													
 												</ul>
                                         </a>
