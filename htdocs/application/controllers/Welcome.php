@@ -13,8 +13,8 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		$row = $this->Dashboard_model->get_all();
-	
-		$this->load->view('blank',$row);
+		$data['dashboard'] = $row;
+		$this->load->view('blank',$data);
 	}
 	public function all_agenda()
 	{

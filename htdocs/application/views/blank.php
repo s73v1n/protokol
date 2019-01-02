@@ -305,9 +305,11 @@ $this->load->view('template/menu');
 										<!--pesan-->
 										<a href="#">
 												<div class="mail-contnet">
-                                                <h5><?php echo $disposisi?></h5> 
-												<span class="mail-desc"><?php echo $kegiatan?></span> 
-												<span class="time"><?php echo $mulai?></span> </div>
+												<?php foreach ($dashboard as $data){?>
+                                                <h5><?php echo $data->disposisi?></h5> 
+												<span class="mail-desc"><?php echo $data->kegiatan?></span> 
+												<span class="time"><?php echo $data->start?></span> </div>
+												<?php}?>
                                         </a>
 										
 										<!--pesan-->
