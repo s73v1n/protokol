@@ -20,11 +20,12 @@ class Welcome extends CI_Controller {
 				'lusa' => strftime( "%A, %d %B %Y", strtotime("+2 day")),
 		);
 		
+		
 		$this->load->view('blank',$data);
 	}
 	public function all_agenda()
 	{
-		$row['dashboard'] = $this->Dashboard_model->get_all();
+		$row['agenda'] = array('First Object', 'Second Object', 'Third Object');
 		$arrlength = count($row);
 
 		echo '<pre>'; print_r($row); echo '</pre>';
