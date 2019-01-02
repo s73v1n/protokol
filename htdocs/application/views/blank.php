@@ -304,7 +304,7 @@ $this->load->view('template/menu');
 									<div class="message-widget message-scroll">
 										<!--pesan-->
 										<div class="card-body">
-											<h4 class="card-title"><?php echo $mulai?></h4>
+											<h6 class="card-title"><?php echo $mulai?></h6>
 											<p class="card-text"><?php echo $kegiatan?></p>
 										</div>
 										<!--pesan-->
