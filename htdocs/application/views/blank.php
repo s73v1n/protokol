@@ -313,7 +313,7 @@ $this->load->view('template/menu');
                                         </a>
 										<a href="#">
 											    <ul>
-													<?php foreach ($dahsboard as $item):?>
+													<?php foreach ($dashboard as $item):?>
 													<li><?php echo $item['disposisi'];?></li>
 													<?php endforeach;?>
 												</ul>
