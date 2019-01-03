@@ -309,10 +309,7 @@ $this->load->view('template/menu');
                                         </a>
 										<?php
 										endforeach;
-										?>
-										
-										
-										
+										?>										
 										<!--pesan-->
 									</div>								
 								</div>
