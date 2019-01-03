@@ -96,14 +96,14 @@ $this->load->view('template/menu');
 										<!--pesan-->
 										<?php
 										$i=0;
-										foreach($agenda as $giat): 
+										foreach($agenda1 as $giat1): 
 										$i++;
 										?>
 										<a href="#">
 												<div class="mail-contnet">
-												<h5><?php echo ($giat['disposisi']);?></h5> 
-												<span class="mail-desc"><?php echo ($giat['kegiatan']);?></span> 
-												<span class="time"><?php echo ($giat['start']);?></span> </div>
+												<h5><?php echo ($giat1['disposisi']);?></h5> 
+												<span class="mail-desc"><?php echo ($giat1['kegiatan']);?></span> 
+												<span class="time"><?php echo ($giat1['start']);?></span> </div>
                                         </a>
 										<?php
 										endforeach;
@@ -124,7 +124,20 @@ $this->load->view('template/menu');
 									<div class="message-box">
 										<div class="message-widget message-scroll">
 											<!--pesan-->
-									
+											<?php
+										$i=0;
+										foreach($agenda2 as $giat2): 
+										$i++;
+										?>
+										<a href="#">
+												<div class="mail-contnet">
+												<h5><?php echo ($giat2['disposisi']);?></h5> 
+												<span class="mail-desc"><?php echo ($giat2['kegiatan']);?></span> 
+												<span class="time"><?php echo ($giat2['start']);?></span> </div>
+                                        </a>
+										<?php
+										endforeach;
+										?>	
 											<!--pesan-->
 										</div>								
 									</div>
@@ -140,7 +153,20 @@ $this->load->view('template/menu');
 									<div class="message-box">
 										<div class="message-widget message-scroll">
 											<!--pesan-->
-									
+											<?php
+												$i=0;
+												foreach($agenda3 as $giat3): 
+												$i++;
+												?>
+											<a href="#">
+												<div class="mail-contnet">
+												<h5><?php echo ($giat3['disposisi']);?></h5> 
+												<span class="mail-desc"><?php echo ($giat3['kegiatan']);?></span> 
+												<span class="time"><?php echo ($giat3['start']);?></span> </div>
+											</a>
+											<?php
+											endforeach;
+											?>	
 											<!--pesan-->
 										</div>								
 									</div>

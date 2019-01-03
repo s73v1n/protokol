@@ -19,8 +19,9 @@ class Welcome extends CI_Controller {
 				'besok' => strftime( "%A, %d %B %Y", strtotime("+1 day")),
 				'lusa' => strftime( "%A, %d %B %Y", strtotime("+2 day")),
 		);
-		$data['agenda']= $this->Dashboard_model->get_all();
-		
+		$data['agenda1']= $this->Dashboard_model->agenda_1();
+		$data['agenda2']= $this->Dashboard_model->agenda_2();
+		$data['agenda3']= $this->Dashboard_model->agenda_3();
 		
 		$this->load->view('blank',$data);
 	}
