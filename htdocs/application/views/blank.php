@@ -298,14 +298,14 @@ $this->load->view('template/menu');
 									<div class="message-widget message-scroll">
 										<!--pesan-->
 										<?php
-										$i=0
+										$i=0;
 										foreach($agenda as $giat){ 
 										$i++;
 										?>
 										<a href="#">
 												<div class="mail-contnet">
 												
-                                                <h5><?php echo $giat['disposisi']?></h5> 
+                                                <h5><?php echo $giat['disposisi'];?></h5> 
 												<span class="mail-desc"></span> 
 												<span class="time"></span> </div>
 												
