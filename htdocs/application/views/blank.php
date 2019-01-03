@@ -304,8 +304,7 @@ $this->load->view('template/menu');
 										?>
 										<a href="#">
 												<div class="mail-contnet">
-												
-                                                <h5></h5> 
+												<h5><?php echo ($giat['kegiatan']);?></h5> 
 												<span class="mail-desc"></span> 
 												<span class="time"></span> </div>
 												
