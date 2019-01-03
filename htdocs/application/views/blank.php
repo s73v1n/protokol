@@ -297,6 +297,7 @@ $this->load->view('template/menu');
                                 <div class="message-box">
 									<div class="message-widget message-scroll">
 										<!--pesan-->
+										
 										<a href="#">
 												<div class="mail-contnet">
 												
@@ -306,10 +307,11 @@ $this->load->view('template/menu');
 												
                                         </a>
 										<a href="#">
-											    <ul>
+											    
 													<?php foreach ($agenda as $giat){
-														print_r($giat['kegiatan']);
-													}?>
+														?> 
+													<ul><?php echo $giat['kegiatan'];?></ul>
+													<?php}?>
 													
 													
 												</ul>
