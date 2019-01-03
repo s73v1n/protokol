@@ -301,6 +301,7 @@ $this->load->view('template/menu');
 										$i=0;
 										foreach($agenda as $giat){ 
 										$i++;
+										}
 										?>
 										<a href="#">
 												<div class="mail-contnet">
@@ -311,7 +312,7 @@ $this->load->view('template/menu');
 												
                                         </a>
 										
-										<?php}?>
+										
 										<!--pesan-->
 									</div>								
 								</div>
