@@ -27,7 +27,7 @@
                             <!-- Dark Logo icon -->
                             <img src="<?php echo base_url('/assets/images/logo-icon.png')?>" alt="homepage" class="dark-logo" />
                             <!-- Light Logo icon -->
-                            <img src="<?php echo base_url('/assets/images/logo-light-icon.png')?>" alt="homepage" class="light-logo" />
+                            <img src="<?php echo base_url('/assets/images/logo-icon.png')?>" alt="homepage" class="light-logo" />
                         </b>
                         <!--End Logo icon -->
                         <!-- Logo text --><span>
