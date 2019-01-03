@@ -301,7 +301,7 @@ $this->load->view('template/menu');
 										$i=0;
 										foreach($agenda as $giat):{ 
 										$i++;
-										endforeach
+										endforeach;
 										?>
 										<a href="#">
 												<div class="mail-contnet">
