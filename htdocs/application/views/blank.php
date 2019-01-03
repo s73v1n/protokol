@@ -304,9 +304,9 @@ $this->load->view('template/menu');
 										?>
 										<a href="#">
 												<div class="mail-contnet">
-												<h5><?php echo ($giat['kegiatan']);?></h5> 
-												<span class="mail-desc"></span> 
-												<span class="time"></span> </div>
+												<h5><?php echo ($giat['disposisi']);?></h5> 
+												<span class="mail-desc"><?php echo ($giat['kegiatan']);?></span> 
+												<span class="time"><?php echo ($giat['start']);?></span> </div>
 												
                                         </a>
 										<?php
