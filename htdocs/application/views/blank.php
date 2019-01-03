@@ -306,15 +306,16 @@ $this->load->view('template/menu');
 												<span class="time"></span> </div>
 												
                                         </a>
-										<a href="#">
+										
 											    
-													<?php foreach ($agenda as $giat){
-														?> 
-													<ul><?php echo $giat['kegiatan'];?></ul>
-													<?php}?>
-													
-													
-												</ul>
+										<?php
+											$i=0;
+											foreach ($agenda as $giat){
+											$i++
+										?> 
+										<a href="#">
+											<ul><?php print_r($giat['kegiatan']);?></ul>
+													<?php}?>											
                                         </a>
 										<!--pesan-->
 									</div>								
