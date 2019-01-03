@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -307,7 +306,6 @@ $this->load->view('template/menu');
 												<h5><?php echo ($giat['disposisi']);?></h5> 
 												<span class="mail-desc"><?php echo ($giat['kegiatan']);?></span> 
 												<span class="time"><?php echo ($giat['start']);?></span> </div>
-												
                                         </a>
 										<?php
 										endforeach;
