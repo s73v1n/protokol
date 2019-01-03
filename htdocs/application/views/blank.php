@@ -299,7 +299,7 @@ $this->load->view('template/menu');
 										<!--pesan-->
 										<?php
 										$i=0;
-										foreach($agenda as $giat):{ 
+										foreach($agenda as $giat): 
 										$i++;
 										endforeach;
 										?>
