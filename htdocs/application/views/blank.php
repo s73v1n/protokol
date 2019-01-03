@@ -307,16 +307,7 @@ $this->load->view('template/menu');
 												
                                         </a>
 										
-											    
-										<?php
-											$i=0;
-											foreach ($agenda as $giat){
-											$i++
-										?> 
-										<a href="#">
-											<ul><?php print_r($giat['kegiatan']);?></ul>
-													<?php}?>											
-                                        </a>
+
 										<!--pesan-->
 									</div>								
 								</div>
