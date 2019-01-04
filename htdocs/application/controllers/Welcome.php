@@ -32,8 +32,6 @@ class Welcome extends CI_Controller {
 		foreach ($row as $value){
 			echo '<pre>'; print_r($value['kegiatan']); echo '</pre>';
 		}
-		
-
-		
 	}
+
 }
