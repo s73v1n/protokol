@@ -186,7 +186,7 @@ $this->load->view('template/menu');
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h4 class="modal-title"><strong>Add Event</strong></h4>
+                                                <h4 class="modal-title"><strong>Tambah Kegiatan</strong></h4>
                                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                                             </div>
                                             <div class="modal-body"></div>

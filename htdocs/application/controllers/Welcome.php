@@ -29,9 +29,7 @@ class Welcome extends CI_Controller {
 	{
 		$row = $this->Dashboard_model->get_all();
 		$arrlength = count($row);
-		foreach ($row as $value){
-			echo '<pre>'; print_r($value['kegiatan']); echo '</pre>';
-		}
+		
 	}
 
 }
