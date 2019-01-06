@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
-    <title>Bagian Protokol-Pemerintah Kota Jambi</title>
+    <title>Material Pro Admin Template - The Most Complete & Trusted Bootstrap 4 Admin Template</title>
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo base_url('/assets/plugins/bootstrap/css/bootstrap.min.css')?>" rel="stylesheet">
     <!-- chartist CSS -->
@@ -24,7 +24,6 @@
     <link href="<?php echo base_url('/assets/plugins/calendar/dist/fullcalendar.css')?>" rel="stylesheet" />
 	<!-- Custom CSS -->
     <link href="<?php echo base_url('/assets/horizontal/css/style.css')?>" rel="stylesheet">
-	<link href="<?php echo base_url('/assets/horizontal/css/bootstrap-colorpicker.min.css')?>" rel="stylesheet">
     <!-- You can change the theme colors from here -->
     <link href="<?php echo base_url('/assets/horizontal/css/colors/blue.css')?>" id="theme" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -200,39 +199,41 @@ $this->load->view('template/menu');
                                     </div>
                                 </div>
                                 <!-- Modal Add Category -->
-								<div class="modal fade">
-									<div class="modal-dialog">
-										<div class="modal-content">
-											<div class="modal-header">
-													<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-													<h4 class="modal-title"></h4>
-											</div>
-											<div class="modal-body">
-											<div class="error"></div>
-												<form class="form-horizontal" id="crud-form">
-												<input type="hidden" id="start">
-												<input type="hidden" id="end">
-												<div class="form-group">
-													<label class="control-label" for="title">Title</label>
-													<input id="title" name="title" type="text" class="form-control input-md" />
-												</div>                            
-												<div class="form-group">
-													<label class="control-label" for="description">Description</label>
-													<textarea class="form-control" id="description" name="description"></textarea>                              
-												</div>
-												<div class="form-group">
-													<label class="control-label" for="color">Color</label>
-													<input id="color" name="color" type="text" class="form-control input-md" readonly="readonly" />
-													<span class="help-block">Click to pick a color</span>                                
-												</div>
-												</form>
-											</div>
-											<div class="modal-footer">
-												<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-											</div>
-										</div>
-									</div>
-								</div>
+                                <div class="modal fade none-border" id="add-new-event">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title"><strong>Add</strong> a category</h4>
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <label class="control-label">Category Name</label>
+                                                            <input class="form-control form-white" placeholder="Enter name" type="text" name="category-name" />
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label class="control-label">Choose Category Color</label>
+                                                            <select class="form-control form-white" data-placeholder="Choose a color..." name="category-color">
+                                                                <option value="success">Success</option>
+                                                                <option value="danger">Danger</option>
+                                                                <option value="info">Info</option>
+                                                                <option value="primary">Primary</option>
+                                                                <option value="warning">Warning</option>
+                                                                <option value="inverse">Inverse</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-danger waves-effect waves-light save-category" data-dismiss="modal">Save</button>
+                                                <button type="button" class="btn btn-white waves-effect" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <!-- END MODAL -->
                             </div>
                         </div>
@@ -262,7 +263,7 @@ $this->load->view('template/menu');
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
-            <footer class="footer"> © 2018 Pemerintah Kota Jambi </footer>
+            <footer class="footer"> © 2018 Material Pro Admin by wrappixel.com </footer>
             <!-- ============================================================== -->
             <!-- End footer -->
             <!-- ============================================================== -->
@@ -296,7 +297,6 @@ $this->load->view('template/menu');
     <script src="<?php echo base_url('/assets/plugins/sparkline/jquery.sparkline.min.js')?>"></script>
     <!--Custom JavaScript -->
     <script src="<?php echo base_url('/assets/horizontal/js/custom.min.js')?>"></script>
-	<script src="<?php echo base_url('/assets/horizontal/js/bootstrap-colorpicker.min.js')?>"></script>
     <!-- ============================================================== -->
     <!-- This page plugins -->
     <!-- ============================================================== -->
@@ -306,7 +306,7 @@ $this->load->view('template/menu');
     <!-- Calendar JavaScript -->
     <script src="<?php echo base_url('/assets/plugins/moment/moment.js')?>"></script>
     <script src="<?php echo base_url('/assets/plugins/calendar/dist/fullcalendar.min.js')?>"</script>
-
+    <script src="<?php echo base_url('/assets/plugins/calendar/dist/jquery.fullcalendar.js')?>"</script>
     <script src="<?php echo base_url('/assets/plugins/calendar/dist/cal-init.js')?>"</script>
     <!-- ============================================================== -->
     <!-- Style switcher -->
