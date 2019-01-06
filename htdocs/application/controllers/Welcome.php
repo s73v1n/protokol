@@ -6,6 +6,7 @@ class Welcome extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('Dashboard_model');
+		$this->load->model('Calendar_model');
 		$this->load->database();
 		$this->load->helper('url');
 	}
@@ -31,5 +32,35 @@ class Welcome extends CI_Controller {
 		$arrlength = count($row);
 		
 	}
+	Public function getEvents()
+	{
+		$result=$this->Calendar_model->getEvents();
+		echo json_encode($result);
+	}
+	/*Add new event */
+	Public function addEvent()
+	{
+		$result=$this->Calendar_model->addEvent();
+		echo $result;
+	}
+	/*Update Event */
+	Public function updateEvent()
+	{
+		$result=$this->Calendar_model->updateEvent();
+		echo $result;
+	}
+	/*Delete Event*/
+	Public function deleteEvent()
+	{
+		$result=$this->Calendar_model->deleteEvent();
+		echo $result;
+	}
+	Public function dragUpdateEvent()
+	{	
+
+		$result=$this->Calendar_model->dragUpdateEvent();
+		echo $result;
+	}
+
 
 }
