@@ -15,7 +15,7 @@ class Calendar extends CI_Controller {
 	/*Home page Calendar view  */
 	Public function index()
 	{
-		$this->load->view('app-calendar');
+		$this->load->view('calendar');
 	}
 
 	/*Get all Events */
