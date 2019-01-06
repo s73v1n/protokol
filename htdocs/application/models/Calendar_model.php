@@ -8,8 +8,8 @@ class Calendar_model extends CI_Model {
 	Public function getEvents()
 	{
 		
-	$sql = "SELECT * FROM calendar ORDER BY calendar.start ASC";
-	return $this->db->query($sql)->result();
+	$sql = "SELECT * FROM tbl_giat WHERE tbl_giat.start BETWEEN ? AND ? ORDER BY tbl_giat.start ASC";
+	return $this->db->query($sql, array($_GET['start'], $_GET['end']))->result();
 
 	}
 
@@ -18,7 +18,7 @@ class Calendar_model extends CI_Model {
 	Public function addEvent()
 	{
 
-	$sql = "INSERT INTO calendar (title,calendar.start,calendar.end,description, color) VALUES (?,?,?,?,?)";
+	$sql = "INSERT INTO tbl_giat (title,tbl_giat.start,tbl_giat.end,description, color) VALUES (?,?,?,?,?)";
 	$this->db->query($sql, array($_POST['title'], $_POST['start'],$_POST['end'], $_POST['description'], $_POST['color']));
 		return ($this->db->affected_rows()!=1)?false:true;
 	}
@@ -28,7 +28,7 @@ class Calendar_model extends CI_Model {
 	Public function updateEvent()
 	{
 
-	$sql = "UPDATE calendar SET title = ?, description = ?, color = ? WHERE id = ?";
+	$sql = "UPDATE tbl_giat SET title = ?, description = ?, color = ? WHERE id = ?";
 	$this->db->query($sql, array($_POST['title'],$_POST['description'], $_POST['color'], $_POST['id']));
 		return ($this->db->affected_rows()!=1)?false:true;
 	}
@@ -39,7 +39,7 @@ class Calendar_model extends CI_Model {
 	Public function deleteEvent()
 	{
 
-	$sql = "DELETE FROM calendar WHERE id = ?";
+	$sql = "DELETE FROM tbl_giat WHERE id = ?";
 	$this->db->query($sql, array($_GET['id']));
 		return ($this->db->affected_rows()!=1)?false:true;
 	}
@@ -50,7 +50,7 @@ class Calendar_model extends CI_Model {
 	{
 			//$date=date('Y-m-d h:i:s',strtotime($_POST['date']));
 
-		$sql = "UPDATE calendar SET  calendar.start = ? ,calendar.end = ?  WHERE id = ?";
+		$sql = "UPDATE tbl_giat SET  tbl_giat.start = ? ,tbl_giat.end = ?  WHERE id = ?";
 		$this->db->query($sql, array($_POST['start'],$_POST['end'], $_POST['id']));
 		return ($this->db->affected_rows()!=1)?false:true;
 
