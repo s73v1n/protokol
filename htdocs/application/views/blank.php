@@ -24,6 +24,7 @@
     <link href="<?php echo base_url('/assets/plugins/calendar/dist/fullcalendar.css')?>" rel="stylesheet" />
 	<!-- Custom CSS -->
     <link href="<?php echo base_url('/assets/horizontal/css/style.css')?>" rel="stylesheet">
+	<link href="<?php echo base_url('/assets/horizontal/css/bootstrap-colorpicker.min.css')?>" rel="stylesheet">
     <!-- You can change the theme colors from here -->
     <link href="<?php echo base_url('/assets/horizontal/css/colors/blue.css')?>" id="theme" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -295,6 +296,7 @@ $this->load->view('template/menu');
     <script src="<?php echo base_url('/assets/plugins/sparkline/jquery.sparkline.min.js')?>"></script>
     <!--Custom JavaScript -->
     <script src="<?php echo base_url('/assets/horizontal/js/custom.min.js')?>"></script>
+	<script src="<?php echo base_url('/assets/horizontal/js/bootstrap-colorpicker.min.js')?>"></script>
     <!-- ============================================================== -->
     <!-- This page plugins -->
     <!-- ============================================================== -->
@@ -304,7 +306,7 @@ $this->load->view('template/menu');
     <!-- Calendar JavaScript -->
     <script src="<?php echo base_url('/assets/plugins/moment/moment.js')?>"></script>
     <script src="<?php echo base_url('/assets/plugins/calendar/dist/fullcalendar.min.js')?>"</script>
-    <script src="<?php echo base_url('/assets/plugins/calendar/dist/jquery.fullcalendar.js')?>"</script>
+
     <script src="<?php echo base_url('/assets/plugins/calendar/dist/main.js')?>"</script>
     <!-- ============================================================== -->
     <!-- Style switcher -->
