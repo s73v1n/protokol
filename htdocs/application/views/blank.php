@@ -307,6 +307,7 @@ $this->load->view('template/menu');
     <script src="<?php echo base_url('/assets/plugins/moment/moment.js')?>"></script>
     <script src="<?php echo base_url('/assets/plugins/calendar/dist/fullcalendar.min.js')?>"</script>
     <script src="<?php echo base_url('/assets/plugins/calendar/dist/jquery.fullcalendar.js')?>"</script>
+	<script src="<?php echo base_url('/assets/plugins/calendar/dist/locale/id.js')?>"></script>
     <script src="<?php echo base_url('/assets/plugins/calendar/dist/cal-init.js')?>"</script>
     <!-- ============================================================== -->
     <!-- Style switcher -->
