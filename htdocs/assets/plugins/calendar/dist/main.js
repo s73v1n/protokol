@@ -1,9 +1,9 @@
 $(function(){
 
-    var currentDate; // Holds the day clicked when adding a new event
-    var currentEvent; // Holds the event object when editing an event
+   // var currentDate; // Holds the day clicked when adding a new event
+   // var currentEvent; // Holds the event object when editing an event
 
-    $('#color').colorpicker(); // Colopicker
+   // $('#color').colorpicker(); // Colopicker
     
 
     var base_url='http://13.76.224.94/protokol/index.php'; // Here i define the base_url
@@ -82,25 +82,7 @@ $(function(){
             });
             },
           
-        // Event Mouseover
-        eventMouseover: function(calEvent, jsEvent, view){
-
-            var tooltip = '<div class="event-tooltip">' + calEvent.description + '</div>';
-            $("body").append(tooltip);
-
-            $(this).mouseover(function(e) {
-                $(this).css('z-index', 10000);
-                $('.event-tooltip').fadeIn('500');
-                $('.event-tooltip').fadeTo('10', 1.9);
-            }).mousemove(function(e) {
-                $('.event-tooltip').css('top', e.pageY + 10);
-                $('.event-tooltip').css('left', e.pageX + 20);
-            });
-        },
-        eventMouseout: function(calEvent, jsEvent) {
-            $(this).css('z-index', 8);
-            $('.event-tooltip').remove();
-        },
+     
         // Handle Existing Event Click
         eventClick: function(calEvent, jsEvent, view) {
             // Set currentEvent variable according to the event clicked in the calendar
