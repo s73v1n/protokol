@@ -3,24 +3,24 @@
     <head>
     <title>Full Calendar CRUD</title>
         <meta charset='utf-8' />
-        <link href="<?php echo base_url();?>assets/css/bootstrap.min.css" rel="stylesheet">
-        <link href='<?php echo base_url();?>assets/css/fullcalendar.css' rel='stylesheet' />
-        <link href="<?php echo base_url();?>assets/css/bootstrapValidator.min.css" rel="stylesheet" />        
-        <link href="<?php echo base_url();?>assets/css/bootstrap-colorpicker.min.css" rel="stylesheet" />
+        <link href="<?php echo base_url();?>assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href='<?php echo base_url();?>assets/plugins/calendar/dist/fullcalendar.css' rel='stylesheet' />
+        <link href="<?php echo base_url();?>assets/plugins/bootstrap/css/bootstrapValidator.min.css" rel="stylesheet" />        
+        <link href="<?php echo base_url();?>assets/plugins/bootstrap/css/bootstrap-colorpicker.min.css" rel="stylesheet" />
         <!-- Custom css  -->
-        <link href="<?php echo base_url();?>assets/css/custom.css" rel="stylesheet" />
+        <link href="<?php echo base_url();?>assets/horizontal/css/custom.css" rel="stylesheet" />
 		
 		<!-- You can change the theme colors from here -->
-		<link href="<?php echo base_url('/assets/css/colors/blue.css')?>" id="theme" rel="stylesheet">
-        <script src='<?php echo base_url();?>assets/js/moment.min.js'></script>
-        <script src="<?php echo base_url();?>assets/js/jquery.min.js"></script>
-        <script src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>
-        <script src="<?php echo base_url();?>assets/js/bootstrapValidator.min.js"></script>
-        <script src="<?php echo base_url();?>assets/js/fullcalendar.min.js"></script>
-        <script src='<?php echo base_url();?>assets/js/bootstrap-colorpicker.min.js'></script>
+
+        <script src='<?php echo base_url();?>assets/horizontal/js/moment.min.js'></script>
+        <script src="<?php echo base_url();?>assets/plugins/jquery/jquery.min.js"></script>
+        <script src="<?php echo base_url();?>assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+        <script src="<?php echo base_url();?>assets/horizontal/js/bootstrapValidator.min.js"></script>
+        <script src="<?php echo base_url();?>assets/plugins/calendar/dist/fullcalendar.min.js"></script>
+        <script src='<?php echo base_url();?>assets/horizontal/js/bootstrap-colorpicker.min.js'></script>
         
 
-        <script src='<?php echo base_url();?>assets/js/main.js'></script>
+        <script src='<?php echo base_url();?>assets/horizontal/js/main.js'></script>
         
     </head>
     <body>
