@@ -1,6 +1,6 @@
 $(function(){
 
-    var currentDate; // Holds the day clicked when adding a new event
+    //var currentDate; // Holds the day clicked when adding a new event
     var currentEvent; // Holds the event object when editing an event
 
    $('#color').colorpicker(); // Colopicker
