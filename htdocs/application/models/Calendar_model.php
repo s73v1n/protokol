@@ -8,7 +8,7 @@ class Calendar_model extends CI_Model {
 	Public function getEvents()
 	{
 		
-	$sql = "SELECT * FROM tbl_giat WHERE tbl_giat.start BETWEEN ? AND ? ORDER BY tbl_giat.start ASC";
+	$sql = "SELECT * FROM events WHERE events.start BETWEEN ? AND ? ORDER BY events.start ASC";
 	return $this->db->query($sql, array($_GET['start'], $_GET['end']))->result();
 
 	}
@@ -18,7 +18,7 @@ class Calendar_model extends CI_Model {
 	Public function addEvent()
 	{
 
-	$sql = "INSERT INTO tbl_giat (title,tbl_giat.start,tbl_giat.end,description, color) VALUES (?,?,?,?,?)";
+	$sql = "INSERT INTO events (title,events.start,events.end,description, color) VALUES (?,?,?,?,?)";
 	$this->db->query($sql, array($_POST['title'], $_POST['start'],$_POST['end'], $_POST['description'], $_POST['color']));
 		return ($this->db->affected_rows()!=1)?false:true;
 	}
@@ -28,7 +28,7 @@ class Calendar_model extends CI_Model {
 	Public function updateEvent()
 	{
 
-	$sql = "UPDATE tbl_giat SET title = ?, description = ?, color = ? WHERE id = ?";
+	$sql = "UPDATE events SET title = ?, description = ?, color = ? WHERE id = ?";
 	$this->db->query($sql, array($_POST['title'],$_POST['description'], $_POST['color'], $_POST['id']));
 		return ($this->db->affected_rows()!=1)?false:true;
 	}
@@ -39,7 +39,7 @@ class Calendar_model extends CI_Model {
 	Public function deleteEvent()
 	{
 
-	$sql = "DELETE FROM tbl_giat WHERE id = ?";
+	$sql = "DELETE FROM events WHERE id = ?";
 	$this->db->query($sql, array($_GET['id']));
 		return ($this->db->affected_rows()!=1)?false:true;
 	}
@@ -50,8 +50,8 @@ class Calendar_model extends CI_Model {
 	{
 			//$date=date('Y-m-d h:i:s',strtotime($_POST['date']));
 
-		$sql = "UPDATE tbl_giat SET  tbl_giat.start = ? ,tbl_giat.end = ?  WHERE id = ?";
-		$this->db->query($sql, array($_POST['start'],$_POST['end'], $_POST['id']));
+			$sql = "UPDATE events SET  events.start = ? ,events.end = ?  WHERE id = ?";
+			$this->db->query($sql, array($_POST['start'],$_POST['end'], $_POST['id']));
 		return ($this->db->affected_rows()!=1)?false:true;
 
 
