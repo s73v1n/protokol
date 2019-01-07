@@ -8,8 +8,8 @@ class Calendar_model extends CI_Model {
 	Public function getEvents()
 	{
 		
-	$sql = "SELECT * FROM events WHERE events.start BETWEEN ? AND ? ORDER BY events.start ASC";
-	return $this->db->query($sql, array($_GET['start'], $_GET['end']))->result();
+	$sql = "SELECT * FROM events ORDER BY events.start ASC";
+	return $this->db->query($sql)->result();
 
 	}
 
