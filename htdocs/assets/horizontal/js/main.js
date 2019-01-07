@@ -6,7 +6,7 @@ $(function(){
     $('#color').colorpicker(); // Colopicker
     
 
-    var base_url='http://localhost/fullcalendar/'; // Here i define the base_url
+    var base_url='http://13.76.224.94/protokol/index.php/'; // Here i define the base_url
 
     // Fullcalendar
     $('#calendar').fullCalendar({
