@@ -18,8 +18,7 @@
     <link href="<?php echo base_url('/assets/plugins/chartist-js/dist/chartist-init.css')?>" rel="stylesheet">
     <link href="<?php echo base_url('/assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css')?>" rel="stylesheet">
     <link href="<?php echo base_url('/assets/plugins/css-chart/css-chart.css')?>" rel="stylesheet">
-    <!-- Vector CSS -->
-    <link href="<?php echo base_url('/assets/plugins/vectormap/jquery-jvectormap-2.0.2.css')?>" rel="stylesheet" />
+    <link href="<?php echo base_url();?>assets/css/bootstrap-colorpicker.min.css" rel="stylesheet" />
     <!-- Calendar CSS -->
     <link href="<?php echo base_url('/assets/plugins/calendar/dist/fullcalendar.css')?>" rel="stylesheet" />
 	<!-- Custom CSS -->

@@ -3,7 +3,7 @@ $(function(){
    // var currentDate; // Holds the day clicked when adding a new event
    // var currentEvent; // Holds the event object when editing an event
 
-   // $('#color').colorpicker(); // Colopicker
+   $('#color').colorpicker(); // Colopicker
     
 
     var base_url='http://13.76.224.94/protokol/index.php'; // Here i define the base_url
