@@ -4,7 +4,7 @@
     <title>Full Calendar CRUD</title>
         <meta charset='utf-8' />
         <link href="<?php echo base_url();?>assets/css/bootstrap.min.css" rel="stylesheet">
-        <link href='<?php echo base_url();?>assets/css/fullcalendar.css' rel='stylesheet' />
+        <link href='<?php echo base_url();?>/assets/plugins/calendar/dist/fullcalendar.css' rel='stylesheet' />
         <link href="<?php echo base_url();?>assets/css/bootstrapValidator.min.css" rel="stylesheet" />        
         <link href="<?php echo base_url();?>assets/css/bootstrap-colorpicker.min.css" rel="stylesheet" />
         <!-- Custom css  -->
@@ -14,7 +14,8 @@
         <script src="<?php echo base_url();?>assets/js/jquery.min.js"></script>
         <script src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>
         <script src="<?php echo base_url();?>assets/js/bootstrapValidator.min.js"></script>
-        <script src="<?php echo base_url();?>assets/js/fullcalendar.min.js"></script>
+		<script src="<?php echo base_url('/assets/plugins/calendar/dist/fullcalendar.min.js')?>"</script>
+        <script src="<?php echo base_url();?>assets/plugins/calendar/dist/locale/id.js"></script>
         <script src='<?php echo base_url();?>assets/js/bootstrap-colorpicker.min.js'></script>
         
 
