@@ -14,7 +14,7 @@
         <script src="<?php echo base_url();?>assets/js/jquery.min.js"></script>
         <script src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>
         <script src="<?php echo base_url();?>assets/js/bootstrapValidator.min.js"></script>
-        <script src="<?php echo base_url();?>assets/js/fullcalendar.min.js"></script>
+        <script src="<?php echo base_url();?>assets/plugins/calendar/fullcalendar.min.js"></script>
 		<script src="<?php echo base_url();?>assets/plugins/calendar/dist/locale/id.js"></script>
         <script src='<?php echo base_url();?>assets/js/bootstrap-colorpicker.min.js'></script>
         
