@@ -10,7 +10,11 @@ $(function() {
 			url: 'http://13.76.224.94/protokol/index.php/calendar/getEvents',
 			type : 'POST',
 		},
-		defaultView: 'month',   
+		defaultView: 'month',
+		slotDuration: '00:30:00',  
+        minTime: '08:00:00',
+        maxTime: '19:00:00',
+			
   });
 
 });
