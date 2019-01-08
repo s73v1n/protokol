@@ -21,6 +21,8 @@ $(function() {
         selectable: true,
 		selectHelper: true,
 		select: function(start, end) {
+			$('#start').val(moment(start).format('YYYY-MM-DD HH:mm:ss'));
+            $('#end').val(moment(end).format('YYYY-MM-DD HH:mm:ss'));
 			alert('selected ' + start.format() + ' to ' + end.format());
 			},
   });
