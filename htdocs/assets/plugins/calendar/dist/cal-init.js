@@ -1,4 +1,24 @@
+$(function(){
+	var base_url='http://13.76.224.94/protokol/index.php';
+			$('#calendar').fullCalendar({
+			header: {
+            left: 'prev, next, today',
+            center: 'title',
+            right: 'month, agendaWeek, agendaDay'
+			},
+			slotDuration: '00:30:00', 
+            minTime: '08:00:00',
+            maxTime: '19:00:00',  
+            defaultView: 'month',  
+            handleWindowResize: true,   
+            events: base_url+'calendar/getEvents',
+			});
+	
+	
+	
+}
 
+/*
 !function($) {
     "use strict";
 
@@ -14,7 +34,7 @@
     };
 
 
-    /* on drop */
+    /* on drop 
     CalendarApp.prototype.onDrop = function (eventObj, date) { 
         var $this = this;
             // retrieve the dropped element's stored Event Object
@@ -34,7 +54,7 @@
                 eventObj.remove();
             }
     },
-    /* on click on event */
+    /* on click on event 
     CalendarApp.prototype.onEventClick =  function (calEvent, jsEvent, view) {
         var $this = this;
             var form = $("<form></form>");
@@ -56,7 +76,7 @@
                 return false;
             });
     },
-    /* on select */
+    /* on select 
     CalendarApp.prototype.onSelect = function (start, end, allDay) {
         var $this = this;
             $this.$modal.modal({
@@ -121,10 +141,10 @@
             });
         });
     }
-    /* Initializing */
+    /* Initializing 
     CalendarApp.prototype.init = function() {
         this.enableDrag();
-        /*  Initialize the calendar  */
+        /*  Initialize the calendar  
         var date = new Date();
         var d = date.getDate();
         var m = date.getMonth();
@@ -173,7 +193,7 @@
 
         var $this = this;
         $this.$calendarObj = $this.$calendar.fullCalendar({
-            slotDuration: '00:15:00', /* If we want to split day time each 15minutes */
+            slotDuration: '00:30:00', /* If we want to split day time each 15minutes 
             minTime: '08:00:00',
             maxTime: '19:00:00',  
             defaultView: 'month',  
@@ -217,3 +237,4 @@ function($) {
     "use strict";
     $.CalendarApp.init()
 }(window.jQuery);
+*/
