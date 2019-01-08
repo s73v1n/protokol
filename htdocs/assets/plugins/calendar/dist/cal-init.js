@@ -6,7 +6,10 @@ $(function() {
             center: 'title',
             right: 'month, agendaWeek, agendaDay'
         },
-		events: base_url+'calendar/getEvents',
+		events: {
+			url: 'http://13.76.224.94/protokol/index.php/calendar/getEvents',
+			type : 'POST',
+		},
 		defaultView: 'month',   
   });
 
