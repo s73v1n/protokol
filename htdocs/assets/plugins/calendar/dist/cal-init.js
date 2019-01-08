@@ -23,7 +23,7 @@ $(function() {
 		select: function(start, end) {
 			$('#start').val(moment(start).format('YYYY-MM-DD HH:mm:ss'));
             $('#end').val(moment(end).format('YYYY-MM-DD HH:mm:ss'));
-			alert('selected ' + start.format('YYYY-MM-DD HH:mm:ss') + ' to ' + end.format('YYYY-MM-DD HH:mm:ss')));
+			alert('selected ' + moment(start).format('YYYY-MM-DD HH:mm:ss') + ' to ' + moment(start).format('YYYY-MM-DD HH:mm:ss')));
 			},
   });
 
