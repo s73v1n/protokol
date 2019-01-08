@@ -1,59 +1,13 @@
 $(function() {
-
-  $('#calendar').fullCalendar({
-    defaultView: 'month',
-    defaultDate: '2018-12-12',
-    eventColor: 'green',
-    events: [
-      {
-        title: 'All Day Event',
-        start: '2018-12-01'
-      },
-      {
-        title: 'Long Event',
-        start: '2018-12-07',
-        end: '2018-12-10',
-        color: 'purple' // override!
-      },
-      {
-        id: 999,
-        title: 'Repeating Event',
-        start: '2018-12-09T16:00:00'
-      },
-      {
-        id: 999,
-        title: 'Repeating Event',
-        start: '2018-12-16T16:00:00'
-      },
-      {
-        title: 'Conference',
-        start: '2018-12-11',
-        end: '2018-12-13',
-        color: 'purple' // override!
-      },
-      {
-        title: 'Meeting',
-        start: '2018-12-12T10:30:00',
-        end: '2018-12-12T12:30:00'
-      },
-      {
-        title: 'Lunch',
-        start: '2018-12-12T12:00:00'
-      },
-      {
-        title: 'Meeting',
-        start: '2018-12-12T14:30:00'
-      },
-      {
-        title: 'Birthday Party',
-        start: '2018-12-13T07:00:00'
-      },
-      {
-        title: 'Click for Google',
-        url: 'http://google.com/',
-        start: '2018-12-28'
-      }
-    ]
+	var base_url='http://13.76.224.94/protokol/index.php';
+	$('#calendar').fullCalendar({
+		header: {
+            left: 'prev, next, today',
+            center: 'title',
+            right: 'month, agendaWeek, agendaDay'
+        },
+		events: base_url+'calendar/getEvents',
+		defaultView: 'month',   
   });
 
 });
