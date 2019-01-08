@@ -20,22 +20,9 @@ $(function() {
         eventLimit: true, // allow "more" link when too many events
         selectable: true,
 		selectHelper: true,
-			select: function(start, end) {                
-                $('#start').val(moment(start).format('YYYY-MM-DD HH:mm:ss'));
-                $('#end').val(moment(end).format('YYYY-MM-DD HH:mm:ss'));
-                 // Open modal to add event
-            modal({
-                // Available buttons when adding
-                buttons: {
-                    add: {
-                        id: 'add-event', // Buttons id
-                        css: 'btn-success', // Buttons class
-                        label: 'Add' // Buttons label
-                    }
-                },
-                title: 'Add Event' // Modal title
-            });
-            },
+		select: function(start, end) {
+			alert('selected ' + start.format() + ' to ' + end.format());
+			},
   });
 
 });
