@@ -14,7 +14,13 @@ $(function() {
 		slotDuration: '00:30:00',  
         minTime: '08:00:00',
         maxTime: '19:00:00',
-			
+		handleWindowResize: true,
+		editable: true,
+        droppable: true, // this allows things to be dropped onto the calendar !!!
+        eventLimit: true, // allow "more" link when too many events
+        selectable: true,
+		selectHelper: true,
+		
   });
 
 });
