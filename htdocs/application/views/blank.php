@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
-    <title>Material Pro Admin Template - The Most Complete & Trusted Bootstrap 4 Admin Template</title>
+    <title>Bagian Protokol - Pemerintah Kota Jambi</title>
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo base_url('/assets/plugins/bootstrap/css/bootstrap.min.css')?>" rel="stylesheet">
     <!-- chartist CSS -->
@@ -181,58 +181,47 @@ $this->load->view('template/menu');
                             <div class="card-body">
                                 <div id="calendar"></div>
                                 <!-- BEGIN MODAL -->
-                                <div class="modal fade none-border" id="my-event">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h4 class="modal-title"><strong>Tambah Kegiatan</strong></h4>
-                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                            </div>
-                                            <div class="modal-body"></div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-white waves-effect" data-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-success save-event waves-effect waves-light">Create event</button>
-                                                <button type="button" class="btn btn-danger delete-event waves-effect waves-light" data-dismiss="modal">Delete</button>
-                                            </div>
-                                        </div>
-                                    </div>
+        <div class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title"></h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="error"></div>
+                        <form class="form-horizontal" id="crud-form">
+                        <input type="hidden" id="start">
+                        <input type="hidden" id="end">
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="title">Title</label>
+                                <div class="col-md-4">
+                                    <input id="title" name="title" type="text" class="form-control input-md" />
                                 </div>
+                            </div>                            
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="description">Description</label>
+                                <div class="col-md-4">
+                                    <textarea class="form-control" id="description" name="description"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="color">Color</label>
+                                <div class="col-md-4">
+                                    <input id="color" name="color" type="text" class="form-control input-md" readonly="readonly" />
+                                    <span class="help-block">Click to pick a color</span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
                                 <!-- Modal Add Category -->
-                                <div class="modal fade none-border" id="add-new-event">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h4 class="modal-title"><strong>Add</strong> a category</h4>
-                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <form>
-                                                    <div class="row">
-                                                        <div class="col-md-6">
-                                                            <label class="control-label">Category Name</label>
-                                                            <input class="form-control form-white" placeholder="Enter name" type="text" name="category-name" />
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <label class="control-label">Choose Category Color</label>
-                                                            <select class="form-control form-white" data-placeholder="Choose a color..." name="category-color">
-                                                                <option value="success">Success</option>
-                                                                <option value="danger">Danger</option>
-                                                                <option value="info">Info</option>
-                                                                <option value="primary">Primary</option>
-                                                                <option value="warning">Warning</option>
-                                                                <option value="inverse">Inverse</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-danger waves-effect waves-light save-category" data-dismiss="modal">Save</button>
-                                                <button type="button" class="btn btn-white waves-effect" data-dismiss="modal">Close</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+
                                 <!-- END MODAL -->
                             </div>
                         </div>
