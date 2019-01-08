@@ -184,7 +184,7 @@ $this->load->view('template/menu');
                                 <div class="modal fade" id="create_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
-                                            <form class="form-horizontal" method="POST" action="POST" id="form_create">
+                                            <form class="form-horizontal" method="POST" action="<?php echo site_url('welcome/addEvent')?>" id="form_create">
                                                 <input type="hidden" name="calendar_id" value="0">
                                                 <div class="modal-header">
                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
