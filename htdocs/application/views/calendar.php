@@ -150,7 +150,7 @@
     <script type="text/javascript" src="<?php echo base_url().'assets/plugins/fullcalendar/fullcalendar.js'; ?>"></script>      
     <script type="text/javascript">
         var get_data        = '<?php echo $get_data; ?>';
-        var backend_url     = '<?php echo site_url(); ?>';
+        var backend_url     = '<?php echo base_url(); ?>';
 
         $(document).ready(function() {
             $('.date-picker').datepicker();
@@ -198,7 +198,7 @@
             var element = $(this);
             var eventData;
             $.ajax({
-                url     : 'http://13.76.224.94/protokol/index.php/calendar/save',
+                url     : backend_url+'calendar/save',
                 type    : element.attr('method'),
                 data    : element.serialize(),
                 dataType: 'JSON',
