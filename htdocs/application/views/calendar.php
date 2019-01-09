@@ -198,7 +198,7 @@
             var element = $(this);
             var eventData;
             $.ajax({
-                url     : backend_url+'calendar/save',
+                url     : '<?php echo site_url('calendar/save)';?>',
                 type    : element.attr('method'),
                 data    : element.serialize(),
                 dataType: 'JSON',
