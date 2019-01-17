@@ -3,7 +3,7 @@ class Dashboard_model extends CI_Model {
 
 	public function data_all()
 	{
-		$all=$this->db->get('tbl_giat')->result();
+		$all=$this->db->get('tbl_giat')->result_array();
 		return $all;
 	}
 	
