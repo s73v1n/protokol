@@ -40,7 +40,7 @@ class Agenda extends REST_Controller {
             ['id' => 3, 'name' => 'Jane', 'email' => 'jane@example.com', 'fact' => 'Lives in the USA', ['hobbies' => ['guitar', 'cycling']]],
         ];
 		$agenda = $this->Dashboard_model->data_all();
-		$this->response($agenda, REST_Controller::HTTP_OK);
+		$this->response($pengguna, REST_Controller::HTTP_OK);
 	}
     public function users_get()
     {
