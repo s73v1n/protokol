@@ -56,18 +56,18 @@ $this->load->view('template/menu');
                 <!-- ============================================================== -->
                 <div class="row page-titles">
                     <div class="col-md-5 col-8 align-self-center">
-                        <h3 class="text-themecolor">Dashboard</h3>
+                        <h3 class="text-themecolor">Dasbor</h3>
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                            <li class="breadcrumb-item active">Dashboard3</li>
+                            <li class="breadcrumb-item"><a href="javascript:void(0)">Beranda</a></li>
+                            <li class="breadcrumb-item active">Dasbor Utama</li>
                         </ol>
                     </div>
                     <div class="col-md-7 col-4 align-self-center">
                         <div class="d-flex m-t-10 justify-content-end">
                             <div class="d-flex m-r-20 m-l-10 hidden-md-down">
                                 <div class="chart-text m-r-10">
-                                    <h6 class="m-b-0"><small>THIS MONTH</small></h6>
-                                    <h4 class="m-t-0 text-info">$58,356</h4></div>
+                                    <h6 class="m-b-0"><small>Kegiatan Bulan Ini</small></h6>
+                                    <h4 class="m-t-0 text-info">49 Kegiatan</h4></div>
                                 <div class="spark-chart">
                                     <div id="monthchart"></div>
                                 </div>
@@ -314,10 +314,7 @@ $this->load->view('template/menu');
     <!--stickey kit -->
     <script src="<?php echo base_url('/assets/plugins/sticky-kit-master/dist/sticky-kit.min.js')?>"></script>
     <script src="<?php echo base_url('/assets/plugins/sparkline/jquery.sparkline.min.js')?>"></script>
-    <!--stickey kit -->
-    <script src="<?php echo base_url('/assets/plugins/sticky-kit-master/dist/sticky-kit.min.js')?>"></script>
-    <script src="<?php echo base_url('/assets/plugins/sparkline/jquery.sparkline.min.js')?>"></script>
-    <script src="<?php echo base_url('/assets/plugins/sparkline/jquery.sparkline.min.js')?>"></script>
+
     <!--Custom JavaScript -->
     <script src="<?php echo base_url('/assets/horizontal/js/custom.min.js')?>"></script>
     <!-- ============================================================== -->
