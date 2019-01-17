@@ -1,13 +1,7 @@
 <?php
-use Restserver\Libraries\REST_Controller;
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-// This can be removed if you use __autoload() in config.php OR use Modular Extensions
-/** @noinspection PhpIncludeInspection */
-//To Solve File REST_Controller not found
-require APPPATH . 'libraries/REST_Controller.php';
-require APPPATH . 'libraries/Format.php';
-class Welcome extends REST_Controller {
+class Welcome extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
@@ -32,12 +26,6 @@ class Welcome extends REST_Controller {
 		
 		$this->load->view('blank',$data);
 	}
-	public function getAgenda()
-	{
-		$response = $this->Dashboard_model->data_all();
-		$this->response($response);
-	}
-	
 	public function all_agenda()
 	{
 		$row = $this->Dashboard_model->get_all();
