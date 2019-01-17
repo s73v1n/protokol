@@ -29,7 +29,7 @@ class Panel extends CI_Controller {
 			$crud->unset_bootstrap();
 			//$crud->unset_jquery();
 			$crud->set_table('tbl_giat');
-			$crud->colums('title','description','start','end','disposisi','keterangan');
+			$crud->columns('title','description','start','end','disposisi','keterangan');
 			$crud->display_as('title','Kegiatan')->display_as('description','Lokasi')->display_as('start','Mulai')->display_as('end','Selesai');
 			$crud->set_relation('disposisi','tbl_diposisi','perangkat');
 			$crud->set_language('indonesian');
