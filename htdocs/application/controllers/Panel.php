@@ -29,6 +29,7 @@ class Panel extends CI_Controller {
 			$crud->unset_bootstrap();
 			//$crud->unset_jquery();
 			$crud->set_table('tbl_giat');
+			$crud->colums('title','description','start','end','disposisi','keterangan')
 			$crud->display_as('title','Kegiatan');
 			$crud->display_as('description','Lokasi');
 			$crud->display_as('start','Mulai');
