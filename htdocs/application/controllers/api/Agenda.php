@@ -31,6 +31,7 @@ class Agenda extends REST_Controller {
         $this->methods['users_get']['limit'] = 500; // 500 requests per hour per user/key
         $this->methods['users_post']['limit'] = 100; // 100 requests per hour per user/key
         $this->methods['users_delete']['limit'] = 50; // 50 requests per hour per user/key
+		$this->methods['getAgenda']['limit'] = 500;
     }
 	public function getAgenda()
 	{	
