@@ -25,14 +25,18 @@ class Example extends REST_Controller {
     {
         // Construct the parent class
         parent::__construct();
-
+		$this->load->model('Dashboard_model');
         // Configure limits on our controller methods
         // Ensure you have created the 'limits' table and enabled 'limits' within application/config/rest.php
         $this->methods['users_get']['limit'] = 500; // 500 requests per hour per user/key
         $this->methods['users_post']['limit'] = 100; // 100 requests per hour per user/key
         $this->methods['users_delete']['limit'] = 50; // 50 requests per hour per user/key
     }
-
+	public function getAgenda()
+	{
+		$response = $this->Dashboard_model->data_all();
+		$this->response($response);
+	}
     public function users_get()
     {
         // Users from a data store e.g. database
