@@ -7,7 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 //To Solve File REST_Controller not found
 require APPPATH . 'libraries/REST_Controller.php';
 require APPPATH . 'libraries/Format.php';
-class Welcome extends CI_Controller {
+class Welcome extends REST_Controller {
 	public function __construct()
 	{
 		parent::__construct();
