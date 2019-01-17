@@ -39,8 +39,8 @@ class Agenda extends REST_Controller {
             ['id' => 2, 'name' => 'Jim', 'email' => 'jim@example.com', 'fact' => 'Developed on CodeIgniter'],
             ['id' => 3, 'name' => 'Jane', 'email' => 'jane@example.com', 'fact' => 'Lives in the USA', ['hobbies' => ['guitar', 'cycling']]],
         ];
-		$response = $this->Dashboard_model->data_all();
-		$this->response($users, REST_Controller::HTTP_OK);
+		$agenda = $this->Dashboard_model->data_all();
+		$this->response($agenda, REST_Controller::HTTP_OK);
 	}
     public function users_get()
     {
