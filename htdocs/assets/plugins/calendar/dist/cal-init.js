@@ -1,5 +1,5 @@
 $(function() {
-	var base_url='http://13.76.224.94/protokol/index.php';
+	var base_url='<?php echo base_url();?>';
 	$('#calendar').fullCalendar({
 		header: {
             left: 'prev, next, today',
@@ -7,7 +7,7 @@ $(function() {
             right: 'month, agendaWeek, agendaDay'
         },
 		events: {
-			url: 'http://13.76.224.94/protokol/index.php/calendar/getEvents',
+			url: base_url+'api/agenda/agenda',
 			
 		},
 		defaultView: 'month',
