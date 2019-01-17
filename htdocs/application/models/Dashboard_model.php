@@ -3,8 +3,11 @@ class Dashboard_model extends CI_Model {
 
 	public function data_all()
 	{
-		$all=$this->db->get('tbl_giat')->result_array();
-		return $all;
+		$this->db->select('tbl_giat.id as id, tbl_giat.title as kegiatan, tbl_giat.start as start, tbl_giat.end as end, tbl_giat.description as tempat, tbl_giat.penyelengara as penyelenggara, tbl_diposisi.perangkat as disposisi, tbl_giat.keterangan as keterangan ');
+		$this->db->from('tbl_giat');
+		$this->db->join('tbl_diposisi', 'tbl_diposisi.id = tbl_giat.disposisi');
+		$query = $this->db->get();
+		return $query->result_array();
 	}
 	
 	public function get_all()
