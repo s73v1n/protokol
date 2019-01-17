@@ -8,6 +8,7 @@ $(function() {
         },
 		events: {
 			url: 'http://13.76.224.94/protokol/api/agenda/agenda',
+			cache:true
 			
 		},
 		defaultView: 'month',
