@@ -32,6 +32,7 @@ class Panel extends CI_Controller {
 			$crud->columns('title','description','start','end','disposisi','keterangan');
 			$crud->display_as('title','Kegiatan')->display_as('description','Lokasi')->display_as('start','Mulai')->display_as('end','Selesai');
 			$crud->set_relation('disposisi','tbl_diposisi','perangkat');
+			$crud->order_by('start','desc');
 			$crud->set_language('indonesian');
 			$output = $crud->render();
 			$this->_example_output($output);
