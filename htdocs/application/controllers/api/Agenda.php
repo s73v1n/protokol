@@ -35,7 +35,7 @@ class Agenda extends REST_Controller {
 	public function getAgenda()
 	{
 		$response = $this->Dashboard_model->data_all();
-		$this->response($response);
+		$this->response($response, REST_Controller::HTTP_OK);
 	}
     public function users_get()
     {
