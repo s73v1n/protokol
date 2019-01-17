@@ -7,7 +7,7 @@ $(function() {
             right: 'month, agendaWeek, agendaDay'
         },
 		events: {
-			url: base_url+'api/agenda/agenda',
+			url: 'http://13.76.224.94/protokol/api/agenda/agenda',
 			
 		},
 		defaultView: 'month',
