@@ -4,10 +4,7 @@ class Dashboard_model extends CI_Model {
 	public function data_all()
 	{
 		$all=$this->db->get('tbl_giat')->result();
-		$response['status']=200;
-		$response['error']=false;
-		$response['events']=$all;
-		return $response;
+		return $all;
 	}
 	
 	public function get_all()
