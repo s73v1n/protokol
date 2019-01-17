@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
+require APPPATH . 'libraries/REST_Controller.php';
 class Welcome extends CI_Controller {
 	public function __construct()
 	{
@@ -26,6 +26,12 @@ class Welcome extends CI_Controller {
 		
 		$this->load->view('blank',$data);
 	}
+	public function getAgenda()
+	{
+		$response = $this->Dashboard_model->data_all();
+		$this->response($response);
+	}
+	
 	public function all_agenda()
 	{
 		$row = $this->Dashboard_model->get_all();

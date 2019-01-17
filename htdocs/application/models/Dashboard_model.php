@@ -1,6 +1,15 @@
 <?php
 class Dashboard_model extends CI_Model {
 
+	public function data_all()
+	{
+		$this->db->get('tbl_giat')->result();
+		$response['status']=200;
+		$response['error']=false;
+		$response['person']=$all;
+		return $response;
+	}
+	
 	public function get_all()
 	{
 		$this->db->select('tbl_giat.id as id, tbl_giat.title as kegiatan, tbl_giat.start as start, tbl_giat.end as end, tbl_giat.description as tempat, tbl_giat.penyelengara as penyelenggara, tbl_diposisi.perangkat as disposisi, tbl_giat.keterangan as keterangan ');
