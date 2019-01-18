@@ -327,7 +327,7 @@ $this->load->view('template/menu');
 											Disposisi: <span id="disposisi"></span><br>
                                             </div>
                                             <div class="modal-footer">
-                                                <button type="button" href="<?php site_url('/panel/agenda/add');?>" class="btn btn-danger waves-effect waves-light">Simpan</button>
+                                                <button type="button" class="btn btn-danger waves-effect waves-light"> <a href="<?php site_url('/panel/agenda/add');?>">Simpan</a></button>
 												<button type="button" class="btn btn-info waves-effect" data-dismiss="modal">Close</button>
                                             </div>
                                         </div>
