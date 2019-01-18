@@ -270,34 +270,38 @@ $this->load->view('template/menu');
                                                 <form>
                                                     <div class="form-group">
                                                         <label for="recipient-name" class="control-label">Kegiatan:</label>
-                                                        <input type="text" class="form-control" id="recipient-name">
+                                                        <input type="text" class="form-control" id="agendaGiat">
                                                     </div>
 													<div class="form-group">
-                                                        <label for="recipient-name" class="control-label">Penyelenggara:</label>
-                                                        <input type="text" class="form-control" id="recipient-name">
+                                                        <label for="recipient-name" class="control-label">Lokasi:</label>
+                                                        <input type="text" class="form-control" id="agendaLokasi">
+                                                    </div>
+													<div class="form-group">
+                                                        <label for="recipient-name" class="control-label">Pelaksana:</label>
+                                                        <input type="text" class="form-control" id="agendaPelaksana">
                                                     </div>
 													<div class="form-group">
                                                         <label for="recipient-name" class="control-label">Disposisi:</label>
-                                                        <input type="text" class="form-control" id="recipient-name">
+                                                        <input type="text" class="form-control" id="agendaDisposisi">
                                                     </div>
 													<div class="form-group">
                                                         <label for="recipient-name" class="control-label">Mulai:</label>
-                                                        <input type="text" class="form-control" id="recipient-name">
+                                                        <input type="text" class="form-control" id="start">
                                                     </div>
 													
 													<div class="form-group">
                                                         <label for="recipient-name" class="control-label">Selesai:</label>
-                                                        <input type="text" class="form-control" id="recipient-name">
+                                                        <input type="text" class="form-control" id="end">
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="message-text" class="control-label">Keterangan:</label>
-                                                        <textarea class="form-control" id="message-text"></textarea>
+                                                        <textarea class="form-control" id="agendaKeterangan"></textarea>
                                                     </div>
                                                 </form>
                                             </div>
                                             <div class="modal-footer">
-                                                <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-danger waves-effect waves-light">Save changes</button>
+                                                <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Tutup</button>
+                                                <button type="button" class="btn btn-danger waves-effect waves-light">Simpan</button>
                                             </div>
                                         </div>
                                     </div>
