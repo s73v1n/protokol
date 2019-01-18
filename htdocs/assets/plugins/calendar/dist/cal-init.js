@@ -27,13 +27,12 @@ $(function() {
                     save();
                     $('#calendar').fullCalendar('unselect');
                 },
-		eventClick:  function(event, jsEvent, view) {
-            $('#modalTitle').html(event.title);
-            $('#modalBody').html(event.description);
-            $('#eventUrl').attr('href',event.url);
-            $('#fullCalModal').modal();
-        },
-  });
+		eventClick: function(event){
+			$('#modalTitle').html(event.title);
+			$('#modalBody').html(event.description);
+			$('#fullCalModal').modal();
+		},
+  });	
 
 });
 /*
