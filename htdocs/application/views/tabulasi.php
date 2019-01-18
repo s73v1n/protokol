@@ -124,7 +124,11 @@ $this->load->view('template/menu');
     <?php foreach($js_files as $file): ?>
         <script src="<?php echo $file; ?>"></script>
     <?php endforeach; ?>
-
+	<script>
+		$(function() {
+			$('#cp1').colorpicker();
+		});
+	</script>
     <!-- Bootstrap tether Core JavaScript -->
     <script src="<?php echo base_url('/assets/plugins/popper/popper.min.js')?>"></script>
     <script src="<?php echo base_url('/assets/plugins/bootstrap/js/bootstrap.min.js')?>"></script>
