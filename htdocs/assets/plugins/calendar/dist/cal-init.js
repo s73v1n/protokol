@@ -44,9 +44,9 @@ $(function() {
     }*/
 	  eventRender: function(event, element) {
 			element.click(function(){
-			$("#modal-title").html(event.title);
-			$("#startTime").html(moment(event.start).format('MMM Do h:mm A'));
-            $("#endTime").html(moment(event.end).format('MMM Do h:mm A'));
+			$("#modalTitle").html(event.title);
+			$("#startTime").html(moment(event.start).format('MMM Do h:mm'));
+            $("#endTime").html(moment(event.end).format('MMM Do h:mm'));
             $("#modalBody").html(event.description);
             $("#disposisi").html(event.disposisi);
 			$('#fullCalModal').modal();
