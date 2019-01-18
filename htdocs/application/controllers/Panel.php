@@ -45,7 +45,7 @@ class Panel extends CI_Controller {
 			//$crud->unset_jquery();
 			$crud->set_table('tbl_diposisi');
 			$crud->callback_edit_field('color',function ($value, $primary_key) {
-			return '<input id="cp1" type="text" class="form-control" value="'.$value.'">';
+			return '<input id="cp1" type="text" class="colorpicker-default form-control" value="'.$value.'" name="color">';
 			});
 			$output = $crud->render();
 			$this->_example_output($output);
