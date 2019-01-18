@@ -264,16 +264,33 @@ $this->load->view('template/menu');
                                         <div class="modal-content">
                                             <div class="modal-header">
                                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                                <h4 class="modal-title">Modal Content is Responsive</h4>
+                                                <h4 class="modal-title">Tambah Kegiatan</h4>
                                             </div>
                                             <div class="modal-body">
                                                 <form>
                                                     <div class="form-group">
-                                                        <label for="recipient-name" class="control-label">Recipient:</label>
+                                                        <label for="recipient-name" class="control-label">Kegiatan:</label>
+                                                        <input type="text" class="form-control" id="recipient-name">
+                                                    </div>
+													<div class="form-group">
+                                                        <label for="recipient-name" class="control-label">Penyelenggara:</label>
+                                                        <input type="text" class="form-control" id="recipient-name">
+                                                    </div>
+													<div class="form-group">
+                                                        <label for="recipient-name" class="control-label">Disposisi:</label>
+                                                        <input type="text" class="form-control" id="recipient-name">
+                                                    </div>
+													<div class="form-group">
+                                                        <label for="recipient-name" class="control-label">Mulai:</label>
+                                                        <input type="text" class="form-control" id="recipient-name">
+                                                    </div>
+													
+													<div class="form-group">
+                                                        <label for="recipient-name" class="control-label">Selesai:</label>
                                                         <input type="text" class="form-control" id="recipient-name">
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="message-text" class="control-label">Message:</label>
+                                                        <label for="message-text" class="control-label">Keterangan:</label>
                                                         <textarea class="form-control" id="message-text"></textarea>
                                                     </div>
                                                 </form>
