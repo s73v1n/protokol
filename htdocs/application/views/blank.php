@@ -286,21 +286,26 @@ $this->load->view('template/menu');
                                     </div>
                                 </div>
 								<!--END Create Modal-->
-								<div id="fullCalModal" class="modal fade">
-									<div class="modal-dialog">
-										<div class="modal-content">
-											<div class="modal-header">
-												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span> <span class="sr-only">close</span></button>
-											<h4 id="modalTitle" class="modal-title"></h4>
-											</div>
-											<div id="modalBody" class="modal-body"></div>
-											<div class="modal-footer">
-												<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-												<button class="btn btn-primary">Remove</button>
-											</div>
-										</div>
-									</div>
-								</div> 
+
+								<!-- sample modal content -->
+                                <div id="fullCalModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title" id="modalTitle"></h4>
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                            </div>
+                                            <div id="modalBody" class="modal-body">
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-info waves-effect" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                        <!-- /.modal-content -->
+                                    </div>
+                                    <!-- /.modal-dialog -->
+                                </div>
+                                <!-- /.modal -->								
                             </div>
                         </div>
                     </div>
