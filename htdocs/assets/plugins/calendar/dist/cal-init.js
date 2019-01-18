@@ -42,6 +42,11 @@ $(function() {
             $("#fullCalModal").dialog({ modal: true, title: event.title, width:350});
         });
     }*/
+	  eventRender: function(event, element) {
+			element.click(function(){
+			$('#fullCalModal').modal();
+			});
+	}
 
   });	
 
