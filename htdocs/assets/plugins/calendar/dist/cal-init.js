@@ -36,7 +36,7 @@ $(function() {
         $(element).popover({
 			placement : 'top',
 			html : true,
-			trigger : 'hover',
+			trigger : 'click',
 			title : event.title + ' <a href="#" class="close" data-dismiss="alert">×</a>',
 			content : '<p>' + event.start + '</p><p>' + event.end + '<p>' + event.description + '</p>'
 			});
