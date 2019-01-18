@@ -27,11 +27,21 @@ $(function() {
                     save();
                     $('#calendar').fullCalendar('unselect');
                 },
-		eventClick: function(calEvent){
+		/*eventClick: function(calEvent){
 			$('#modalTitle').html(calEvent.title);
 			$('#modalBody').html('<p>'+calEvent.description+'</p>'+'<p>Mulai:'+calEvent.moment(start).format('YYYY-MM-DD HH:mm:ss')+'</p>'+'<p>Selesai'+calEvent.moment(end).format('YYYY-MM-DD HH:mm:ss')+'</p>');
 			$('#fullCalModal').modal();
-		},
+		},*/
+		eventRender: function (event, element) 
+        element.attr('href', 'javascript:void(0);');
+        element.click(function() {
+            $("#startTime").html(moment(event.start).format('MMM Do h:mm A'));
+            $("#endTime").html(moment(event.end).format('MMM Do h:mm A'));
+            $("#modalBody").html(event.description);
+            $("#disposisi").attr('href', event.disposisi);
+            $("#fullCalModal").dialog({ modal: true, title: event.title, width:350});
+        });
+    }
 
   });	
 
