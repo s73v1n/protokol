@@ -31,7 +31,7 @@ $(function() {
 			$('#modalTitle').html(calEvent.title);
 			$('#modalBody').html('<p>'+calEvent.description+'</p>'+'<p>Mulai:'+calEvent.moment(start).format('YYYY-MM-DD HH:mm:ss')+'</p>'+'<p>Selesai'+calEvent.moment(end).format('YYYY-MM-DD HH:mm:ss')+'</p>');
 			$('#fullCalModal').modal();
-		},*/
+		},
 		eventRender: function (event, element){
         element.attr('href', 'javascript:void(0);');
         element.click(function() {
@@ -41,7 +41,7 @@ $(function() {
             $("#disposisi").attr('href', event.disposisi);
             $("#fullCalModal").dialog({ modal: true, title: event.title, width:350});
         });
-    }
+    }*/
 
   });	
 
