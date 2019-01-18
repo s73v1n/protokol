@@ -1,67 +1,190 @@
 <!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
-<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
-<!--[if !IE]><!-->
 <html lang="en">
-    <!--<![endif]-->
-    <head>
-        <meta charset="utf-8" />
-        <title>Codeigniter Fullcalendar</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta content="width=device-width, initial-scale=1" name="viewport" />
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url().'assets/css/bootstrap.min.css'; ?>">
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url().'assets/css/style.css'; ?>">
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url().'assets/font-awesome/css/font-awesome.min.css'; ?>">
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url().'assets/plugins/fullcalendar/fullcalendar.css'; ?>">
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url().'assets/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css'; ?>">
-    </head>
-    <body>
-    
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-         
-          <center>
-              <a href="https://fullcalendar.io/">
-                <img id="logo" src="https://fullcalendar.io/images/logo.svg" width="58" height="48">
-              </a>
-              +
-              <a href="https://fullcalendar.io/">
-                <img id="logo" src="https://www.codeigniter.com/assets/images/ci-logo-white.png" width="58" height="48">
-              </a>
-          </center>
-      </div>
-    </nav>        
 
-    <div class="container">
-        <div class="page-content-wrapper">
-            <div class="page-content">
-                <div class="alert notification" style="display: none;">
-                    <button class="close" data-close="alert"></button>
-                    <p></p>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="portlet light bordered">
-                            <div class="portlet-body">
-                                <div class="table-toolbar">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="btn-group">
-                                                <a href="#" class="btn btn-primary add_calendar"> ADD NEW EVENT
-                                                    <i class="fa fa-plus"></i>
-                                                </a>
-                                                <br>
-                                                <br>
-                                            </div>
-                                        </div>
-                                    </div>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
+    <title>Bagian Protokol - Pemerintah Kota Jambi</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="<?php echo base_url('/assets/plugins/bootstrap/css/bootstrap.min.css')?>" rel="stylesheet">
+    <!-- chartist CSS -->
+    <link href="<?php echo base_url('/assets/plugins/chartist-js/dist/chartist.min.css')?>" rel="stylesheet">
+    <link href="<?php echo base_url('/assets/plugins/chartist-js/dist/chartist-init.css')?>" rel="stylesheet">
+    <link href="<?php echo base_url('/assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css')?>" rel="stylesheet">
+    <link href="<?php echo base_url('/assets/plugins/css-chart/css-chart.css')?>" rel="stylesheet">
+    <link href="<?php echo base_url();?>assets/css/bootstrap-colorpicker.min.css" rel="stylesheet" />
+    <!-- Calendar CSS -->
+    <link href="<?php echo base_url('/assets/plugins/calendar/dist/fullcalendar.css')?>" rel="stylesheet" />
+	<!-- Custom CSS -->
+    <link href="<?php echo base_url('/assets/horizontal/css/style.css')?>" rel="stylesheet">
+    <!-- You can change the theme colors from here -->
+    <link href="<?php echo base_url('/assets/horizontal/css/colors/blue.css')?>" id="theme" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<?php
+$this->load->view('template/header');
+?>
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+<?php
+$this->load->view('template/menu');
+?>      
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <div class="row page-titles">
+                    <div class="col-md-5 col-8 align-self-center">
+                        <h3 class="text-themecolor">Dasbor</h3>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="javascript:void(0)">Beranda</a></li>
+                            <li class="breadcrumb-item active">Dasbor Utama</li>
+                        </ol>
+                    </div>
+                    <div class="col-md-7 col-4 align-self-center">
+                        <div class="d-flex m-t-10 justify-content-end">
+                            <div class="d-flex m-r-20 m-l-10 hidden-md-down">
+                                <div class="chart-text m-r-10">
+                                    <h6 class="m-b-0"><small>Kegiatan Bulan Ini</small></h6>
+                                    <h4 class="m-t-0 text-info">49 Kegiatan</h4></div>
+                                <div class="spark-chart">
+                                    <div id="monthchart"></div>
                                 </div>
-                                <!-- place -->
-                                <div id="calendarIO"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
+                <!-- Row -->
+                <div class="row">
+                    <!-- Column -->
+                    <div class="col-lg-4 col-md-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title"><?php echo $tanggal?></h4>
+                                <h6 class="card-subtitle">Agenda Hari Ini</h6>
+                                <div class="message-box">
+									<div class="message-widget message-scroll">
+										<!--pesan-->
+										<?php
+										$i=0;
+										foreach($agenda1 as $giat1): 
+										$i++;
+										?>
+										<a href="#">
+												<div class="mail-contnet">
+												<h5><?php echo ($giat1['disposisi']);?></h5> 
+												<span class="mail-desc"><?php echo ($giat1['kegiatan']);?></span> 
+												<span class="time"><?php echo ($giat1['start']);?></span> </div>
+                                        </a>
+										<?php
+										endforeach;
+										?>										
+										<!--pesan-->
+									</div>								
+								</div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    <div class="col-lg-4 col-md-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title"><?php echo $besok?></h4>
+                                <h6 class="card-subtitle">Agenda Besok</h6>
+									<div class="message-box">
+										<div class="message-widget message-scroll">
+											<!--pesan-->
+											<?php
+										$i=0;
+										foreach($agenda2 as $giat2): 
+										$i++;
+										?>
+										<a href="#">
+												<div class="mail-contnet">
+												<h5><?php echo ($giat2['disposisi']);?></h5> 
+												<span class="mail-desc"><?php echo ($giat2['kegiatan']);?></span> 
+												<span class="time"><?php echo ($giat2['start']);?></span> </div>
+                                        </a>
+										<?php
+										endforeach;
+										?>	
+											<!--pesan-->
+										</div>								
+									</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    <div class="col-lg-4 col-md-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title"><?php echo $lusa?></h4>
+                                <h6 class="card-subtitle">Agenda Lusa</h6>
+									<div class="message-box">
+										<div class="message-widget message-scroll">
+											<!--pesan-->
+											<?php
+												$i=0;
+												foreach($agenda3 as $giat3): 
+												$i++;
+												?>
+											<a href="#">
+												<div class="mail-contnet">
+												<h5><?php echo ($giat3['disposisi']);?></h5> 
+												<span class="mail-desc"><?php echo ($giat3['kegiatan']);?></span> 
+												<span class="time"><?php echo ($giat3['start']);?></span> </div>
+											</a>
+											<?php
+											endforeach;
+											?>	
+											<!--pesan-->
+										</div>								
+									</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Row -->
+				<!-- Row -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div id="calendar"></div>
+                                <!-- BEGIN MODAL
                                 <div class="modal fade" id="create_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
-                                            <form class="form-horizontal" method="POST" action="POST" id="form_create">
+                                            <form class="form-horizontal" method="POST" action="<?php echo site_url('welcome/addEvent')?>" id="form_create">
                                                 <input type="hidden" name="calendar_id" value="0">
                                                 <div class="modal-header">
                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -108,7 +231,7 @@
                                                         <label class="control-label col-sm-2">Start Date</label>
                                                         <div class="col-sm-10">
                                                             <div class="input-group input-medium date date-picker" data-date-format="yyyy-mm-dd" data-date-viewmode="years">
-                                                                <input type="text" name="start_date" class="form-control" readonly>
+                                                                <input type="text" name="start" class="form-control" readonly>
                                                                 <span class="input-group-addon"><i class="fa fa-calendar font-dark"></i></span>
                                                             </div>
                                                         </div>
@@ -118,7 +241,7 @@
                                                         <label class="control-label col-sm-2">End Date</label>
                                                         <div class="col-sm-10">
                                                             <div class="input-group input-medium date date-picker" data-date-format="yyyy-mm-dd" data-date-viewmode="years">
-                                                                <input type="text" name="end_date" class="form-control" readonly>
+                                                                <input type="text" name="end" class="form-control" readonly>
                                                                 <span class="input-group-addon"><i class="fa fa-calendar font-dark"></i></span>
                                                             </div>
                                                         </div>
@@ -134,296 +257,134 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- end place -->
+                                END MODAL -->
+								<!--Create modal-->
+								<div id="create_modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                <h4 class="modal-title">Modal Content is Responsive</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form>
+                                                    <div class="form-group">
+                                                        <label for="recipient-name" class="control-label">Recipient:</label>
+                                                        <input type="text" class="form-control" id="recipient-name">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="message-text" class="control-label">Message:</label>
+                                                        <textarea class="form-control" id="message-text"></textarea>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-danger waves-effect waves-light">Save changes</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+								<!--END Create Modal-->
+
+								<!-- sample modal content -->
+                                <div id="fullCalModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title" id="modalTitle"></h4>
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                            </div>
+                                            <div class="modal-body"><br>
+											Kegiatan: <span id="modalBody"></span><br>
+											Start: <span id="startTime"></span><br>
+											End: <span id="endTime"></span><br>
+											Disposisi: <span id="disposisi"></span><br>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-info waves-effect" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                        <!-- /.modal-content -->
+                                    </div>
+                                    <!-- /.modal-dialog -->
+                                </div>
+                                <!-- /.modal -->								
                             </div>
                         </div>
-                        
                     </div>
                 </div>
+                <!-- Row -->
+                
+                
+                <!-- Row -->
+
+
+                <!-- ============================================================== -->
+                <!-- End PAge Content -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Right sidebar -->
+                <!-- ============================================================== -->
+                <!-- .right-sidebar -->
+
+                <!-- ============================================================== -->
+                <!-- End Right sidebar -->
+                <!-- ============================================================== -->
             </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            <footer class="footer"> © 2018 Bagian Protokol Pemerintah Kota Jambi </footer>
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
         </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
     </div>
-    <script type="text/javascript" src="<?php echo base_url().'assets/js/jquery.min.js'; ?>"></script>      
-    <script type="text/javascript" src="<?php echo base_url().'assets/js/moment.min.js'; ?>"></script>      
-    <script type="text/javascript" src="<?php echo base_url().'assets/js/bootstrap.min.js'; ?>"></script>      
-    <script type="text/javascript" src="<?php echo base_url().'assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js'; ?>"></script>      
-    <script type="text/javascript" src="<?php echo base_url().'assets/plugins/fullcalendar/fullcalendar.js'; ?>"></script>      
-    <script type="text/javascript">
-        var get_data        = '<?php echo $get_data; ?>';
-        var backend_url     = '<?php echo base_url(); ?>';
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="<?php echo base_url('/assets/plugins/jquery/jquery.min.js')?>"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="<?php echo base_url('/assets/plugins/popper/popper.min.js')?>"></script>
+    <script src="<?php echo base_url('/assets/plugins/bootstrap/js/bootstrap.min.js')?>"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="<?php echo base_url('/assets/horizontal/js/jquery.slimscroll.js')?>"></script>
+    <!--Wave Effects -->
+    <script src="<?php echo base_url('/assets/horizontal/js/waves.js')?>"></script>
+    <!--Menu sidebar -->
+    <script src="<?php echo base_url('/assets/horizontal/js/sidebarmenu.js')?>"></script>
+    <!--stickey kit -->
+    <script src="<?php echo base_url('/assets/plugins/sticky-kit-master/dist/sticky-kit.min.js')?>"></script>
+    <script src="<?php echo base_url('/assets/plugins/sparkline/jquery.sparkline.min.js')?>"></script>
 
-        $(document).ready(function() {
-            $('.date-picker').datepicker();
-            $('#calendarIO').fullCalendar({
-                header: {
-                    left: 'prev,next today',
-                    center: 'title',
-                    right: 'month,basicWeek,basicDay'
-                },
-                defaultDate: moment().format('YYYY-MM-DD'),
-                editable: true,
-                eventLimit: true, // allow "more" link when too many events
-                selectable: true,
-                selectHelper: true,
-                select: function(start, end) {
-                    $('#create_modal input[name=start_date]').val(moment(start).format('YYYY-MM-DD'));
-                    $('#create_modal input[name=end_date]').val(moment(end).format('YYYY-MM-DD'));
-                    $('#create_modal').modal('show');
-                    save();
-                    $('#calendarIO').fullCalendar('unselect');
-                },
-                eventDrop: function(event, delta, revertFunc) { // si changement de position
-                    editDropResize(event);
-                },
-                eventResize: function(event,dayDelta,minuteDelta,revertFunc) { // si changement de longueur
-                    editDropResize(event);
-                },
-                eventClick: function(event, element)
-                {
-                    deteil(event);
-                    editData(event);
-                    deleteData(event);
-                },
-                events: JSON.parse(get_data)
-            });
-        });
+    <!--Custom JavaScript -->
+    <script src="<?php echo base_url('/assets/horizontal/js/custom.min.js')?>"></script>
+    <!-- ============================================================== -->
+    <!-- This page plugins -->
+    <!-- ============================================================== -->
+    <!-- chartist chart -->
+    <script src="<?php echo base_url('/assets/plugins/chartist-js/dist/chartist.min.js')?>"></script>
+    <script src="<?php echo base_url('/assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js')?>"></script>
+    <!-- Calendar JavaScript -->
+    <script src="<?php echo base_url('/assets/plugins/moment/moment.js')?>"></script>
+    <script src="<?php echo base_url('/assets/plugins/calendar/dist/fullcalendar.min.js')?>"</script>
+    <script src="<?php echo base_url('/assets/plugins/calendar/dist/jquery.fullcalendar.js')?>"</script>
+	<script src="<?php echo base_url('/assets/plugins/calendar/dist/locale/id.js')?>"></script>
+    <script src="<?php echo base_url('/assets/plugins/calendar/dist/cal-init.js')?>"</script>
+    <!-- ============================================================== -->
+    <!-- Style switcher -->
+    <!-- ============================================================== -->
+    <script src="<?php echo base_url('/assets/plugins/styleswitcher/jQuery.style.switcher.js')?>"></script>
+</body>
 
-        $(document).on('click', '.add_calendar', function(){
-            $('#create_modal input[name=calendar_id]').val(0);
-            $('#create_modal').modal('show');  
-        })
-
-        $(document).on('submit', '#form_create', function(){
-
-            var element = $(this);
-            var eventData;
-            $.ajax({
-                url     : backend_url+'calendar/save',
-                type    : element.attr('method'),
-                data    : element.serialize(),
-                dataType: 'JSON',
-                beforeSend: function()
-                {
-                    element.find('button[type=submit]').html('<i class="fa fa-spinner fa-spin" aria-hidden="true"></i>');
-                },
-                success: function(data)
-                {
-                    if(data.status)
-                    {   
-                        eventData = {
-                            id          : data.id,
-                            title       : $('#create_modal input[name=title]').val(),
-                            description : $('#create_modal textarea[name=description]').val(),
-                            start       : moment($('#create_modal input[name=start_date]').val()).format('YYYY-MM-DD HH:mm:ss'),
-                            end         : moment($('#create_modal input[name=end_date]').val()).format('YYYY-MM-DD HH:mm:ss'),
-                            color       : $('#create_modal select[name=color]').val()
-                        };
-                        $('#calendarIO').fullCalendar('renderEvent', eventData, true); // stick? = true
-                        $('#create_modal').modal('hide');
-                        element[0].reset();
-                        $('.notification').removeClass('alert-danger').addClass('alert-primary').find('p').html(data.notif);
-                    }
-                    else
-                    {
-                        element.find('.alert').css('display', 'block');
-                        element.find('.alert').html(data.notif);
-                    }
-                    element.find('button[type=submit]').html('Submit');
-                },
-                error: function (jqXHR, textStatus, errorThrown)
-                {
-                    element.find('button[type=submit]').html('Submit');
-                    element.find('.alert').css('display', 'block');
-                    element.find('.alert').html('Wrong server, please save again');
-                }         
-            });
-            return false;
-        })
-
-        function editDropResize(event)
-        {
-            start = event.start.format('YYYY-MM-DD HH:mm:ss');
-            if(event.end)
-            {
-                end = event.end.format('YYYY-MM-DD HH:mm:ss');
-            }
-            else
-            {
-                end = start;
-            }
-         
-            $.ajax({
-                url     : backend_url+'calendar/save',
-                type    : 'POST',
-                data    : 'calendar_id='+event.id+'&title='+event.title+'&start_date='+start+'&end_date='+end,
-                dataType: 'JSON',
-                beforeSend: function()
-                {
-                },
-                success: function(data)
-                {
-                    if(data.status)
-                    {   
-                        $('.notification').removeClass('alert-danger').addClass('alert-primary').find('p').html('Data success update');
-                    }
-                    else
-                    {
-                        $('.notification').removeClass('alert-primary').addClass('alert-danger').find('p').html('Data cant update');
-                    }
-             
-                },
-                error: function (jqXHR, textStatus, errorThrown)
-                {
-                    $('.notification').removeClass('alert-primary').addClass('alert-danger').find('p').html('Wrong server, please save again');
-                }         
-            });
-        }
-
-        function save()
-        {
-            $('#form_create').submit(function(){
-                var element = $(this);
-                var eventData;
-                $.ajax({
-                    url     : backend_url+'calendar/save',
-                    type    : element.attr('method'),
-                    data    : element.serialize(),
-                    dataType: 'JSON',
-                    beforeSend: function()
-                    {
-                        element.find('button[type=submit]').html('<i class="fa fa-spinner fa-spin" aria-hidden="true"></i>');
-                    },
-                    success: function(data)
-                    {
-                        if(data.status)
-                        {   
-                            eventData = {
-                                id          : data.id,
-                                title       : $('#create_modal input[name=title]').val(),
-                                description : $('#create_modal textarea[name=description]').val(),
-                                start       : moment($('#create_modal input[name=start_date]').val()).format('YYYY-MM-DD HH:mm:ss'),
-                                end         : moment($('#create_modal input[name=end_date]').val()).format('YYYY-MM-DD HH:mm:ss'),
-                                color       : $('#create_modal select[name=color]').val()
-                            };
-                            $('#calendarIO').fullCalendar('renderEvent', eventData, true); // stick? = true
-                            $('#create_modal').modal('hide');
-                            element[0].reset();
-                            $('.notification').removeClass('alert-danger').addClass('alert-primary').find('p').html(data.notif);
-                        }
-                        else
-                        {
-                            element.find('.alert').css('display', 'block');
-                            element.find('.alert').html(data.notif);
-                        }
-                        element.find('button[type=submit]').html('Submit');
-                    },
-                    error: function (jqXHR, textStatus, errorThrown)
-                    {
-                        element.find('button[type=submit]').html('Submit');
-                        element.find('.alert').css('display', 'block');
-                        element.find('.alert').html('Wrong server, please save again');
-                    }         
-                });
-                return false;
-            })
-        }
-
-        function deteil(event)
-        {
-            $('#create_modal input[name=calendar_id]').val(event.id);
-            $('#create_modal input[name=start_date]').val(moment(event.start).format('YYYY-MM-DD'));
-            $('#create_modal input[name=end_date]').val(moment(event.end).format('YYYY-MM-DD'));
-            $('#create_modal input[name=title]').val(event.title);
-            $('#create_modal input[name=description]').val(event.description);
-            $('#create_modal select[name=color]').val(event.color);
-            $('#create_modal .delete_calendar').show();
-            $('#create_modal').modal('show');
-        }
-
-        function editData(event)
-        {
-            $('#form_create').submit(function(){
-                var element = $(this);
-                var eventData;
-                $.ajax({
-                    url     : backend_url+'calendar/save',
-                    type    : element.attr('method'),
-                    data    : element.serialize(),
-                    dataType: 'JSON',
-                    beforeSend: function()
-                    {
-                        element.find('button[type=submit]').html('<i class="fa fa-spinner fa-spin" aria-hidden="true"></i>');
-                    },
-                    success: function(data)
-                    {
-                        if(data.status)
-                        {   
-                            event.title         = $('#create_modal input[name=title]').val();
-                            event.description   = $('#create_modal textarea[name=description]').val();
-                            event.start         = moment($('#create_modal input[name=start_date]').val()).format('YYYY-MM-DD HH:mm:ss');
-                            event.end           = moment($('#create_modal input[name=end_date]').val()).format('YYYY-MM-DD HH:mm:ss');
-                            event.color         = $('#create_modal select[name=color]').val();
-                            $('#calendarIO').fullCalendar('updateEvent', event);
-
-                            $('#create_modal').modal('hide');
-                            element[0].reset();
-                            $('#create_modal input[name=calendar_id]').val(0)
-                            $('.notification').removeClass('alert-danger').addClass('alert-primary').find('p').html(data.notif);
-                        }
-                        else
-                        {
-                            element.find('.alert').css('display', 'block');
-                            element.find('.alert').html(data.notif);
-                        }
-                        element.find('button[type=submit]').html('Submit');
-                    },
-                    error: function (jqXHR, textStatus, errorThrown)
-                    {
-                        element.find('button[type=submit]').html('Submit');
-                        element.find('.alert').css('display', 'block');
-                        element.find('.alert').html('Wrong server, please save again');
-                    }         
-                });
-                return false;
-            })
-        }
-
-        function deleteData(event)
-        {
-            $('#create_modal .delete_calendar').click(function(){
-                $.ajax({
-                    url     : backend_url+'calendar/delete',
-                    type    : 'POST',
-                    data    : 'id='+event.id,
-                    dataType: 'JSON',
-                    beforeSend: function()
-                    {
-                    },
-                    success: function(data)
-                    {
-                        if(data.status)
-                        {   
-                            $('#calendarIO').fullCalendar('removeEvents',event._id);
-                            $('#create_modal').modal('hide');
-                            $('#form_create')[0].reset();
-                            $('#create_modal input[name=calendar_id]').val(0)
-                            $('.notification').removeClass('alert-danger').addClass('alert-primary').find('p').html(data.notif);
-                        }
-                        else
-                        {
-                            $('#form_create').find('.alert').css('display', 'block');
-                            $('#form_create').find('.alert').html(data.notif);
-                        }
-                    },
-                    error: function (jqXHR, textStatus, errorThrown)
-                    {
-                        $('#form_create').find('.alert').css('display', 'block');
-                        $('#form_create').find('.alert').html('Wrong server, please save again');
-                    }         
-                });
-            })
-        }
-
-    </script>
-    </body>
 </html>
