@@ -32,11 +32,30 @@ class Agenda extends REST_Controller {
         $this->methods['users_post']['limit'] = 100; // 100 requests per hour per user/key
         $this->methods['users_delete']['limit'] = 50; // 50 requests per hour per user/key
 		$this->methods['agenda_get']['limit'] = 500;
+		$this->methods['agenda_post']['limit'] = 100; // 100 requests per hour per user/key
+        $this->methods['agenda_delete']['limit'] = 50; // 50 requests per hour per user/key
     }
 	public function agenda_get()
 	{	
 		$agenda = $this->Dashboard_model->data_all();
-		$this->response($agenda, REST_Controller::HTTP_OK);
+		$id = $this->get('id');
+		if ($id === NULL)
+        {
+            // Check if the users data store contains users (in case the database result returns NULL)
+            if ($agenda)
+            {
+                // Set the response and exit
+                $this->response($agenda, REST_Controller::HTTP_OK); // OK (200) being the HTTP response code
+            }
+            else
+            {
+                // Set the response and exit
+                $this->response([
+                    'status' => FALSE,
+                    'message' => 'Tidak Ada Agenda'
+                ], REST_Controller::HTTP_NOT_FOUND); // NOT_FOUND (404) being the HTTP response code
+            }
+        }
 	}
     public function users_get()
     {
