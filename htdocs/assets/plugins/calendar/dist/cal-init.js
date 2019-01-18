@@ -21,8 +21,11 @@ $(function() {
         eventLimit: true, // allow "more" link when too many events
         selectable: true,
 		selectHelper: true,
-		select: function(start, end){
-			alert('selected ' + $.fullCalendar.moment(start).format('YYYY MM DD HH:mm:ss') + ' to ' + $.fullCalendar.moment(end).format('YYYY MM DD HH:mm:ss');
+		dayClick: function(date) {
+		alert('clicked ' + date.format());
+		},
+		select: function(startDate, endDate) {
+		alert('selected ' + startDate.format() + ' to ' + endDate.format());
 		},
   });
 
