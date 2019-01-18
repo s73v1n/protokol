@@ -49,7 +49,7 @@ $(function() {
             $("#endTime").html(moment(event.end).format('MMM Do h:mm'));
             $("#modalBody").html(event.description);
             $("#disposisi").html(event.disposisi);
-			$('#fullCalModal').modal(show);
+			$('#fullCalModal').modal();
 			});
 	}
 
