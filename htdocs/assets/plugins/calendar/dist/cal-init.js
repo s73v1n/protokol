@@ -29,7 +29,7 @@ $(function() {
                 },
 		eventClick: function(event){
 			$('#modalTitle').html(event.title);
-			$('#modalBody').html(event.description);
+			$('#modalBody').html(event.id);
 			$('#fullCalModal').modal();
 		},
 
