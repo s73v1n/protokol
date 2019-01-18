@@ -295,7 +295,8 @@ $this->load->view('template/menu');
                                                 <h4 class="modal-title" id="modalTitle"></h4>
                                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                                             </div>
-                                            <div id="modalBody" class="modal-body"><br>
+                                            <div class="modal-body"><br>
+											Kegiatan: <span id="modalBody"></span><br>
 											Start: <span id="startTime"></span><br>
 											End: <span id="endTime"></span><br>
 											Disposisi: <span id="disposisi"></span><br>
