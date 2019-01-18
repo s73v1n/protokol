@@ -102,7 +102,7 @@ $this->load->view('template/menu');
 												<div class="mail-contnet">
 												<h5><?php echo ($giat1['disposisi']);?></h5> 
 												<span class="mail-desc"><?php echo ($giat1['kegiatan']);?></span>
-												<span class="mail-desc">Lokasi:<?php echo ($giat1['lokasi']);?></span>												
+												<span class="mail-desc">Lokasi:<?php echo ($giat1['tempat']);?></span>												
 												<span class="time">Mulai:<?php echo ($giat1['start']);?></span> 
 												<span class="time">selesai:<?php echo ($giat1['end']);?></span> 
 												
