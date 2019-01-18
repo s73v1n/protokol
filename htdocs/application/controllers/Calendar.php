@@ -1,118 +1,66 @@
-<?php defined('BASEPATH') OR exit('No direct script access allowed');
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Calendar extends CI_Controller {
-
 	public function __construct()
 	{
 		parent::__construct();
-		$this->table 		= 'calendar';
-		$this->load->model('Globalmodel', 'modeldb'); 
+		$this->load->model('Dashboard_model');
+		$this->load->model('Calendar_model');
+		$this->load->database();
+		$this->load->helper('url');
 	}
 
-	public function index() 
+	public function index()
 	{
-		$data_calendar = $this->modeldb->get_list($this->table);
-		$calendar = array();
-		foreach ($data_calendar as $key => $val) 
-		{
-			$calendar[] = array(
-							'id' 	=> intval($val->id), 
-							'title' => $val->title, 
-							'description' => trim($val->description), 
-							'start' => date_format( date_create($val->start_date) ,"Y-m-d H:i:s"),
-							'end' 	=> date_format( date_create($val->end_date) ,"Y-m-d H:i:s"),
-							'color' => $val->color,
-							);
-		}
-
-		$data = array();
-		$data['get_data']			= json_encode($calendar);
-		$this->load->view('calendar', $data);
+		date_default_timezone_set('Asia/Jakarta');
+		setlocale(LC_TIME, "id_ID.utf8");
+		$data = array(
+				'tanggal' => strftime( "%A, %d %B %Y", time()),
+				'besok' => strftime( "%A, %d %B %Y", strtotime("+1 day")),
+				'lusa' => strftime( "%A, %d %B %Y", strtotime("+2 day")),
+		);
+		$data['agenda1']= $this->Dashboard_model->agenda_1();
+		$data['agenda2']= $this->Dashboard_model->agenda_2();
+		$data['agenda3']= $this->Dashboard_model->agenda_3();
+		
+		$this->load->view('calendar',$data);
 	}
-
-	public function save()
+	public function all_agenda()
 	{
-		$response = array();
-		$this->form_validation->set_rules('title', 'Title cant be empty ', 'required');
-	    if ($this->form_validation->run() == TRUE)
-      	{
-			$param = $this->input->post();
-			$calendar_id = $param['calendar_id'];
-			unset($param['calendar_id']);
-
-			if($calendar_id == 0)
-			{
-		        $param['create_at']   	= date('Y-m-d H:i:s');
-		        $insert = $this->modeldb->insert($this->table, $param);
-
-		        if ($insert > 0) 
-		        {
-		        	$response['status'] = TRUE;
-		    		$response['notif']	= 'Success add calendar';
-		    		$response['id']		= $insert;
-		        }
-		        else
-		        {
-		        	$response['status'] = FALSE;
-		    		$response['notif']	= 'Server wrong, please save again';
-		        }
-			}
-			else
-			{	
-				$where 		= [ 'id'  => $calendar_id];
-	            $param['modified_at']   	= date('Y-m-d H:i:s');
-	            $update = $this->modeldb->update($this->table, $param, $where);
-
-	            if ($update > 0) 
-	            {
-	            	$response['status'] = TRUE;
-		    		$response['notif']	= 'Success add calendar';
-		    		$response['id']		= $calendar_id;
-	            }
-	            else
-		        {
-		        	$response['status'] = FALSE;
-		    		$response['notif']	= 'Server wrong, please save again';
-		        }
-
-			}
-	    }
-	    else
-	    {
-	    	$response['status'] = FALSE;
-	    	$response['notif']	= validation_errors();
-	    }
-
-		echo json_encode($response);
+		$row = $this->Dashboard_model->get_all();
+		$arrlength = count($row);
+		
 	}
-
-	public function delete()
+	Public function getEvents()
 	{
-		$response 		= array();
-		$calendar_id 	= $this->input->post('id');
-		if(!empty($calendar_id))
-		{
-			$where = ['id' => $calendar_id];
-	        $delete = $this->modeldb->delete($this->table, $where);
-
-	        if ($delete > 0) 
-	        {
-	        	$response['status'] = TRUE;
-	    		$response['notif']	= 'Success delete calendar';
-	        }
-	        else
-	        {
-	        	$response['status'] = FALSE;
-	    		$response['notif']	= 'Server wrong, please save again';
-	        }
-		}
-		else
-		{
-			$response['status'] = FALSE;
-	    	$response['notif']	= 'Data not found';
-		}
-
-		echo json_encode($response);
+		$result=$this->Calendar_model->getEvents();
+		echo json_encode($result);
 	}
+	/*Add new event */
+	Public function addEvent()
+	{
+		$result=$this->Calendar_model->addEvent();
+		echo $result;
+	}
+	/*Update Event */
+	Public function updateEvent()
+	{
+		$result=$this->Calendar_model->updateEvent();
+		echo $result;
+	}
+	/*Delete Event*/
+	Public function deleteEvent()
+	{
+		$result=$this->Calendar_model->deleteEvent();
+		echo $result;
+	}
+	Public function dragUpdateEvent()
+	{	
+
+		$result=$this->Calendar_model->dragUpdateEvent();
+		echo $result;
+	}
+
 
 }
