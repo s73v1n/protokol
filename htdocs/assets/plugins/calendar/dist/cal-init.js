@@ -29,7 +29,7 @@ $(function() {
                 },
 		eventClick: function(calEvent){
 			$('#modalTitle').html(calEvent.title);
-			$('#modalBody').html('<p>'+calEvent.description+'</p>'+'<p>'+calEvent.start+calEvent.end+'</p>');
+			$('#modalBody').html('<p>'+calEvent.description+'</p>'+'<p>Mulai:'+calEvent.moment(start).format('YYYY-MM-DD HH:mm:ss')+'</p>'+'<p>Selesai'+calEvent.moment(end).format('YYYY-MM-DD HH:mm:ss')+'</p>');
 			$('#fullCalModal').modal();
 		},
 
