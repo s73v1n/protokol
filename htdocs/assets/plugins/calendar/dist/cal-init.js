@@ -32,6 +32,14 @@ $(function() {
 			$('#modalBody').html(event.start);
 			$('#fullCalModal').modal();
 		},
+		eventRender: function(event, element) {
+        $(element).popover({
+			placement : 'top',
+			html : true,
+			trigger : 'hover',
+			title : event.title + ' <a href="#" class="close" data-dismiss="alert">×</a>',
+			content : '<p>' + event.start + '</p><p>' + event.end + '<p>' + event.description + '</p>'
+			});
   });	
 
 });
