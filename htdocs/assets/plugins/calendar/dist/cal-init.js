@@ -1,5 +1,5 @@
 $(function() {
-	var base_url='<?php echo base_url();?>';
+	var base_url='http://13.76.224.94/protokol/';
 	$('#calendar').fullCalendar({
 		header: {
             left: 'prev, next, today',
@@ -7,8 +7,7 @@ $(function() {
             right: 'month, agendaWeek, agendaDay'
         },
 		events: {
-			url: 'http://13.76.224.94/protokol/api/agenda/agenda',
-			cache:true
+			url: base_url+'api/agenda/agenda',
 			
 		},
 		defaultView: 'month',
@@ -21,12 +20,24 @@ $(function() {
         eventLimit: true, // allow "more" link when too many events
         selectable: true,
 		selectHelper: true,
-		dayClick: function(date) {
-		alert('clicked ' + date.format());
-		},
-		select: function(startDate, endDate) {
-		alert('selected ' + startDate.format() + ' to ' + endDate.format());
-		},
+		select: function(start, end) {
+			$('#start').val(moment(start).format('YYYY-MM-DD HH:mm:ss'));
+            $('#end').val(moment(end).format('YYYY-MM-DD HH:mm:ss'));
+			
+			},
+		select: function(start, end) {
+                    $('#create_modal input[name=start]').val(moment(start).format('YYYY-MM-DD HH:mm:ss'));
+                    $('#create_modal input[name=end]').val(moment(end).format('YYYY-MM-DD HH:mm:ss'));
+                    $('#create_modal').modal('show');
+                    save();
+                    $('#calendarIO').fullCalendar('unselect');
+                },
+		eventClick:  function(event, jsEvent, view) {
+            $('#modalTitle').html(event.title);
+            $('#modalBody').html(event.description);
+            $('#eventUrl').attr('href',event.url);
+            $('#fullCalModal').modal();
+        },
   });
 
 });
