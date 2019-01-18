@@ -7,7 +7,7 @@ $(function() {
             right: 'month, agendaWeek, agendaDay'
         },
 		events: {
-			url: base_url+'api/agenda/agenda',
+			url: 'api/agenda/agenda',
 			
 		},
 		defaultView: 'month',
@@ -21,16 +21,11 @@ $(function() {
         selectable: true,
 		selectHelper: true,
 		select: function(start, end) {
-			$('#start').val(moment(start).format('YYYY-MM-DD HH:mm:ss'));
-            $('#end').val(moment(end).format('YYYY-MM-DD HH:mm:ss'));
-			
-			},
-		select: function(start, end) {
                     $('#create_modal input[name=start]').val(moment(start).format('YYYY-MM-DD HH:mm:ss'));
                     $('#create_modal input[name=end]').val(moment(end).format('YYYY-MM-DD HH:mm:ss'));
                     $('#create_modal').modal('show');
                     save();
-                    $('#calendarIO').fullCalendar('unselect');
+                    $('#calendar').fullCalendar('unselect');
                 },
 		eventClick:  function(event, jsEvent, view) {
             $('#modalTitle').html(event.title);
