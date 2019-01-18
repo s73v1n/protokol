@@ -27,11 +27,11 @@ $(function() {
                     save();
                     $('#calendar').fullCalendar('unselect');
                 },
-		eventClick: function(event){
+		/*eventClick: function(event){
 			$('#modalTitle').html(event.title);
 			$('#modalBody').html(event.start);
 			$('#fullCalModal').modal();
-		},
+		},*/
 		eventRender: function(event, element) {
         $(element).popover({
 			placement : 'top',
