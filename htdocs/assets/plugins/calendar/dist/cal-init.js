@@ -27,9 +27,9 @@ $(function() {
                     save();
                     $('#calendar').fullCalendar('unselect');
                 },
-		eventClick: function(calEvent, jsEvent, view){
+		eventClick: function(calEvent){
 			$('#modalTitle').html(calEvent.title);
-			$('#modalBody').html(calEvent.description+calEvent.start+calEvent.end);
+			$('#modalBody').html('<p>'+calEvent.description+'</p>'+'<p>'+calEvent.start+calEvent.end+'</p>');
 			$('#fullCalModal').modal();
 		},
 
