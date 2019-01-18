@@ -32,7 +32,7 @@ $(function() {
 			$('#modalBody').html('<p>'+calEvent.description+'</p>'+'<p>Mulai:'+calEvent.moment(start).format('YYYY-MM-DD HH:mm:ss')+'</p>'+'<p>Selesai'+calEvent.moment(end).format('YYYY-MM-DD HH:mm:ss')+'</p>');
 			$('#fullCalModal').modal();
 		},*/
-		eventRender: function (event, element) 
+		eventRender: function (event, element){
         element.attr('href', 'javascript:void(0);');
         element.click(function() {
             $("#startTime").html(moment(event.start).format('MMM Do h:mm A'));
