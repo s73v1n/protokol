@@ -27,19 +27,12 @@ $(function() {
                     save();
                     $('#calendar').fullCalendar('unselect');
                 },
-		/*eventClick: function(event){
+		eventClick: function(event){
 			$('#modalTitle').html(event.title);
-			$('#modalBody').html(event.start);
+			$('#modalBody').html(event.id);
 			$('#fullCalModal').modal();
-		},*/
-		eventRender: function(event, element) {
-        $(element).popover({
-			placement : 'top',
-			html : true,
-			trigger : 'click',
-			title : event.title + ' <a href="#" class="close" data-dismiss="alert">×</a>',
-			content : '<p>' + event.start + '</p><p>' + event.end + '<p>' + event.description + '</p>'
-			});
+		},
+
   });	
 
 });
