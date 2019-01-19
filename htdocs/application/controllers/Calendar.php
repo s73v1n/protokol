@@ -32,6 +32,11 @@ class Calendar extends CI_Controller {
 		$arrlength = count($row);
 		
 	}
+	Public function test()
+	{
+	$result=$this->Calendar_model->get_id();
+	echo json_encode($result);
+	}
 	Public function getEvents()
 	{
 		$result=$this->Calendar_model->getEvents();

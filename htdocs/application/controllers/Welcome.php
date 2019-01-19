@@ -29,8 +29,7 @@ class Welcome extends CI_Controller {
 	public function all_agenda()
 	{
 		$row = $this->Dashboard_model->get_all();
-		$arrlength = count($row);
-		
+		$arrlength = count($row);		
 	}
 	Public function getEvents()
 	{
