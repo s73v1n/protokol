@@ -12,7 +12,7 @@ class Calendar_model extends CI_Model {
 	}
 	Public function get_id()
 	{		
-	$this->db->select('tbl_giat.id as id, tbl_giat.title as title, tbl_giat.start as start, tbl_giat.end as end, tbl_giat.description as description, tbl_giat.penyelenggara as penyelenggara, tbl_giat.disposisi as disposisi, tbl_diposisi.color as color');
+	$this->db->select('tbl_giat.id as id, tbl_giat.title as title, tbl_giat.start as start, tbl_giat.end as end, tbl_giat.description as description, tbl_giat.penyelengara as penyelenggara, tbl_giat.disposisi as disposisi, tbl_diposisi.color as color');
 	$this->db->from('tbl_giat');
 	$this->db->join('tbl_diposisi', 'tbl_giat.disposisi=tbl_diposisi.id');
 	$query = $this->db->get();
