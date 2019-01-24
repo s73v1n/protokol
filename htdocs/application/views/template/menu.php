@@ -12,10 +12,13 @@
                             <a class="has-arrow" href="<?php echo site_url('/panel/agenda')?>" aria-expanded="false"><i class="mdi mdi-table"></i><span class="hide-menu">Tabulasi </span></a>
                         </li>
                         <li>
-                            <a class="has-arrow " href="<?php echo site_url('calendar')?>" aria-expanded="false"><i class="mdi mdi-table"></i><span class="hide-menu">Kalender</span></a>
+                            <a class="has-arrow " href="<?php echo site_url('calendar')?>" aria-expanded="false"><i class="mdi mdi-chart-bubble"></i><span class="hide-menu">Kalender</span></a>
                         </li>
 						<li>
                             <a class="has-arrow " href="<?php echo site_url('/panel/perangkat')?>" aria-expanded="false"><i class="mdi mdi-bullseye"></i><span class="hide-menu">Pengaturan</span></a>
+                        </li>
+												<li>
+                            <a class="has-arrow " href="<?php echo site_url('/panel/agenda/add')?>" aria-expanded="false"><i class="mdi mdi-file"></i><span class="hide-menu">Tambah</span></a>
                         </li>
                     </ul>
                 </nav>
