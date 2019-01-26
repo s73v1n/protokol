@@ -18,6 +18,7 @@
     <link href="<?php echo base_url('/assets/plugins/chartist-js/dist/chartist-init.css')?>" rel="stylesheet">
     <link href="<?php echo base_url('/assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css')?>" rel="stylesheet">
     <link href="<?php echo base_url('/assets/plugins/css-chart/css-chart.css')?>" rel="stylesheet">
+	<link href="<?php echo base_url('/assets/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css')?>" rel="stylesheet">
     <link href="<?php echo base_url();?>assets/css/bootstrap-colorpicker.min.css" rel="stylesheet" />
     <!-- Calendar CSS -->
     <link href="<?php echo base_url('/assets/plugins/calendar/dist/fullcalendar.css')?>" rel="stylesheet" />
@@ -403,6 +404,7 @@ $this->load->view('template/menu');
     <script src="<?php echo base_url('/assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js')?>"></script>
     <!-- Calendar JavaScript -->
     <script src="<?php echo base_url('/assets/plugins/moment/moment.js')?>"></script>
+	<script src="<?php echo base_url('/assets/plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js')?>"></script>
     <script src="<?php echo base_url('/assets/plugins/calendar/dist/fullcalendar.min.js')?>"</script>
     <script src="<?php echo base_url('/assets/plugins/calendar/dist/jquery.fullcalendar.js')?>"</script>
 	<script src="<?php echo base_url('/assets/plugins/calendar/dist/locale/id.js')?>"></script>
