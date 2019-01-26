@@ -1,6 +1,6 @@
 $(function() {
 	var base_url='http://13.76.224.94/protokol/';
-	$('#date-format').bootstrapMaterialDatePicker({ format : 'dddd DD MMMM YYYY - HH:mm' }); 
+	$('#date-format').bootstrapMaterialDatePicker({ format : 'YYYY-MM-DD - HH:mm' }); 
 	$('#calendar').fullCalendar({
 		header: {
             left: 'prev, next, today',
