@@ -291,7 +291,7 @@ $this->load->view('template/menu');
                                                     </div>
 													<div class="form-group">
                                                         <label for="recipient-name" class="control-label">Mulai:</label>
-                                                        <input type="text" class="form-control" id="start">
+                                                        <input type="text" class="form-control" id="date-format">
                                                     </div>
 													
 													<div class="form-group">
