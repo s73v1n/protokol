@@ -20,6 +20,7 @@ $(function() {
         eventLimit: true, // allow "more" link when too many events
         selectable: true,
 		selectHelper: true,
+		longPressDelay: 100,
 		select: function(start, end) {
                     $('#create_modal input[name=start]').val(moment(start).format('YYYY-MM-DD HH:mm:ss'));
                     $('#create_modal input[name=end]').val(moment(end).format('YYYY-MM-DD HH:mm:ss'));
