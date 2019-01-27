@@ -309,10 +309,11 @@ $this->load->view('template/menu');
                                                 <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Tutup</button>
                                                 <button type="button" type="submit" id="btn_save" class="btn btn-danger waves-effect waves-light">Simpan</button>
                                             </div>
+											</form>
                                         </div>
                                     </div>
                                 </div>
-								</form>
+								
 								<!--END Create Modal-->
 
 								<!-- sample modal content -->
