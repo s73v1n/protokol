@@ -33,7 +33,7 @@ class Calendar_model extends CI_Model {
 		$data = array(
 			'title' 		=> $this->input->post('title'),
 			'description'	=> $this->input->post('description'),
-			'penyelengara'	=> $this->input->post('penyelengara');
+			'penyelengara'	=> $this->input->post('penyelengara'),
 			'start'			=> $this->input->post('start'),
 			'end'			=> $this->input->post('end'),
 			'disposisi'		=> $this->input->post('disposisi'),
