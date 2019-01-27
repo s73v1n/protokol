@@ -28,6 +28,20 @@ class Calendar_model extends CI_Model {
 	$this->db->query($sql, array($_POST['title'], $_POST['start'],$_POST['end'], $_POST['description'], $_POST['color']));
 		return ($this->db->affected_rows()!=1)?false:true;
 	}
+	public function add_Event()
+	{
+		$data = array(
+			'title' 		=> $this->input->post('title'),
+			'description'	=> $this->input->post('description'),
+			'penyelengara'	=> $this->input->post('penyelengara');
+			'start'			=> $this->input->post('start'),
+			'end'			=> $this->input->post('end'),
+			'disposisi'		=> $this->input->post('disposisi'),
+			'keterangan'	=> $this->input->post('keterangan'),		
+		);
+        $result=$this->db->insert('tbl_giat',$data);
+		return $result;	
+    }
 
 	/*Update  event */
 

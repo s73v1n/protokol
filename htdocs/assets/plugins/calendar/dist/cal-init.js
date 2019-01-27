@@ -44,7 +44,7 @@ $(function() {
             $("#fullCalModal").dialog({ modal: true, title: event.title, width:350});
         });
     }*/
-	  eventRender: function(event, element) {
+		eventRender: function(event, element) {
 			element.click(function(){
 			$("#modalTitle").html(event.title);
 			$("#startTime").html(moment(event.start).format('MMM Do h:mm'));
@@ -53,7 +53,34 @@ $(function() {
             $("#disposisi").html(event.disposisi);
 			$('#fullCalModal').modal();
 			});
-	}
+		}
+		
+		$('#btn_save').on('click',function(){
+            var title = $('#title').val();
+            var description = $('#description').val();
+			var penyelengara = $('#penyelengara').val();
+			var start = $('#start').val();
+			var end = $('#end').val();
+            var disposisi = $('#disposisi').val();
+			var keterangan = $('#keterangan').val();
+            $.ajax({
+                type : "POST",
+                url  : "<?php echo site_url('calendar/addEvent')?>",
+                dataType : "JSON",
+                data : {title:title, description:description, start:start, end:end, disposisi:disposisi, keterangan:keterangan},
+                success: function(data){
+                    $('[name="title"]').val("");
+                    $('[name="description"]').val("");
+                    $('[name="start"]').val("");
+					$('[name="end"]').val("");
+                    $('[name="disposisi"]').val("");
+                    $('[name="keterangan"]').val("");
+                    $('#Modal_Add').modal('hide');
+                    show_product();
+                }
+            });
+            return false;
+        });
 
   });	
 

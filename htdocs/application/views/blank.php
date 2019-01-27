@@ -264,53 +264,54 @@ $this->load->view('template/menu');
                                 </div>
                                 END MODAL -->
 								<!--Create modal-->
-								<div id="create_modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+								<form>
+								<div id="Modal_Add" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
                                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                                                 <h4 class="modal-title">Tambah Kegiatan</h4>
                                             </div>
-                                            <div class="modal-body">
-                                                <form>
+                                            <div class="modal-body">                                                
                                                     <div class="form-group">
-                                                        <label for="recipient-name" class="control-label">Kegiatan:</label>
-                                                        <input type="text" class="form-control" id="agendaGiat">
+                                                        <label for="title" class="control-label">Kegiatan:</label>
+                                                        <input type="text" class="form-control" id="title" name="title">
                                                     </div>
 													<div class="form-group">
-                                                        <label for="recipient-name" class="control-label">Lokasi:</label>
-                                                        <input type="text" class="form-control" id="agendaLokasi">
+                                                        <label for="description" class="control-label">Lokasi:</label>
+                                                        <input type="text" class="form-control" id="description" name="description">
                                                     </div>
 													<div class="form-group">
-                                                        <label for="recipient-name" class="control-label">Pelaksana:</label>
-                                                        <input type="text" class="form-control" id="agendaPelaksana">
+                                                        <label for="penyelengara" class="control-label">Pelaksana:</label>
+                                                        <input type="text" class="form-control" id="penyelengara" name="penyelengara">
                                                     </div>
 													<div class="form-group">
-                                                        <label for="recipient-name" class="control-label">Disposisi:</label>
-                                                        <input type="text" class="form-control" id="agendaDisposisi">
+                                                        <label for="disposisi" class="control-label">Disposisi:</label>
+                                                        <input type="text" class="form-control" id="disposisi" name="disposisi">
                                                     </div>
 													<div class="form-group">
-                                                        <label for="recipient-name" class="control-label">Mulai:</label>
-                                                        <input type="text" class="form-control" id="date-format">
+                                                        <label for="start" class="control-label">Mulai:</label>
+                                                        <input type="text" class="form-control" id="start" name="start">
                                                     </div>
 													
 													<div class="form-group">
-                                                        <label for="recipient-name" class="control-label">Selesai:</label>
-                                                        <input type="text" class="form-control" id="date-format">
+                                                        <label for="end" class="control-label">Selesai:</label>
+                                                        <input type="text" class="form-control" id="end" name="end">
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="message-text" class="control-label">Keterangan:</label>
-                                                        <textarea class="form-control" id="agendaKeterangan"></textarea>
+                                                        <label for="keterangan" class="control-label">Keterangan:</label>
+                                                        <textarea class="form-control" id="keterangan" name="keterangan"></textarea>
                                                     </div>
-                                                </form>
+                                                
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Tutup</button>
-                                                <button type="button" class="btn btn-danger waves-effect waves-light">Simpan</button>
+                                                <button type="button" type="submit" id="btn_save" class="btn btn-danger waves-effect waves-light">Simpan</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+								</form>
 								<!--END Create Modal-->
 
 								<!-- sample modal content -->

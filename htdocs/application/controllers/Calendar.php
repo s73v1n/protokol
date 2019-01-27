@@ -45,7 +45,7 @@ class Calendar extends CI_Controller {
 	/*Add new event */
 	Public function addEvent()
 	{
-		$result=$this->Calendar_model->addEvent();
+		$result=$this->Calendar_model->add_Event();
 		echo $result;
 	}
 	/*Update Event */
