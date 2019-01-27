@@ -307,7 +307,7 @@ $this->load->view('template/menu');
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Tutup</button>
-                                                <button type="button" type="submit" id="btn_save" class="btn btn-danger waves-effect waves-light">Simpan</button>
+                                                 <button type="submit" class="btn green">Submit</button>
                                             </div>
 											</form>
                                         </div>
