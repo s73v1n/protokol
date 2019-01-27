@@ -58,6 +58,52 @@ $(function() {
 
 
   });
+			$(document).on('submit', '#form_create', function(){
+            var element = $(this);
+            var eventData;
+            $.ajax({
+                url     : backend_url+'calendar/addEvent',
+                type    : element.attr('method'),
+                data    : element.serialize(),
+                dataType: 'JSON',
+                beforeSend: function()
+                {
+                    element.find('button[type=submit]').html('<i class="fa fa-spinner fa-spin" aria-hidden="true"></i>');
+                },
+                success: function(data)
+                {
+                    if(data.status)
+                    {   
+                        eventData = {
+                            id          : data.id,
+                            title       : $('#create_modal input[name=title]').val(),
+                            description : $('#create_modal textarea[name=description]').val(),
+                            start       : moment($('#create_modal input[name=start]').val()).format('YYYY-MM-DD HH:mm:ss'),
+                            end         : moment($('#create_modal input[name=end]').val()).format('YYYY-MM-DD HH:mm:ss'),
+                            disposisi   : $('#create_modal select[name=disposisi]').val()
+                        };
+                        $('#calendarIO').fullCalendar('renderEvent', eventData, true); // stick? = true
+                        $('#create_modal').modal('hide');
+                        element[0].reset();
+                        $('.notification').removeClass('alert-danger').addClass('alert-primary').find('p').html(data.notif);
+                    }
+                    else
+                    {
+                        element.find('.alert').css('display', 'block');
+                        element.find('.alert').html(data.notif);
+                    }
+                    element.find('button[type=submit]').html('Submit');
+                },
+                error: function (jqXHR, textStatus, errorThrown)
+                {
+                    element.find('button[type=submit]').html('Submit');
+                    element.find('.alert').css('display', 'block');
+                    element.find('.alert').html('Wrong server, please save again');
+                }         
+            });
+            return false;
+        });
+  /*
 		$('#btn_save').on('click',function(){
             var title = $('#title').val();
             var description = $('#description').val();
@@ -82,7 +128,7 @@ $(function() {
                 }
             });
             return false;
-        });  
+        });  */
 
 });
 /*
