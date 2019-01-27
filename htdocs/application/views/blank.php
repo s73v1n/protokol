@@ -276,32 +276,32 @@ $this->load->view('template/menu');
                                             <div class="modal-body">                                                
                                                     <div class="form-group">
                                                         <label for="title" class="control-label">Kegiatan:</label>
-                                                        <input type="text" class="form-control" id="title" name="title">
+                                                        <input type="text" class="form-control"  name="title">
                                                     </div>
 													<div class="form-group">
                                                         <label for="description" class="control-label">Lokasi:</label>
-                                                        <input type="text" class="form-control" id="description" name="description">
+                                                        <input type="text" class="form-control"  name="description">
                                                     </div>
 													<div class="form-group">
                                                         <label for="penyelengara" class="control-label">Pelaksana:</label>
-                                                        <input type="text" class="form-control" id="penyelengara" name="penyelengara">
+                                                        <input type="text" class="form-control"  name="penyelengara">
                                                     </div>
 													<div class="form-group">
                                                         <label for="disposisi" class="control-label">Disposisi:</label>
-                                                        <input type="text" class="form-control" id="disposisi" name="disposisi">
+                                                        <input type="text" class="form-control" name="disposisi">
                                                     </div>
 													<div class="form-group">
                                                         <label for="start" class="control-label">Mulai:</label>
-                                                        <input type="text" class="form-control" id="start" name="start">
+                                                        <input type="text" class="form-control" name="start">
                                                     </div>
 													
 													<div class="form-group">
                                                         <label for="end" class="control-label">Selesai:</label>
-                                                        <input type="text" class="form-control" id="end" name="end">
+                                                        <input type="text" class="form-control" name="end">
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="keterangan" class="control-label">Keterangan:</label>
-                                                        <textarea class="form-control" id="keterangan" name="keterangan"></textarea>
+                                                        <textarea class="form-control" name="keterangan"></textarea>
                                                     </div>
                                                 
                                             </div>
