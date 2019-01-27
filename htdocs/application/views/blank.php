@@ -265,10 +265,10 @@ $this->load->view('template/menu');
                                 END MODAL -->
 								<!--Create modal-->
 								
-								<div id="create_modal class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+								<div id="create_modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
-										<form>
+										<form class="form-horizontal" method="POST" action="POST" id="form_create">
                                             <div class="modal-header">
                                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                                                 <h4 class="modal-title">Tambah Kegiatan</h4>
