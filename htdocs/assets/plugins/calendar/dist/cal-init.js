@@ -55,6 +55,9 @@ $(function() {
 			});
 		}
 		
+
+
+  });
 		$('#btn_save').on('click',function(){
             var title = $('#title').val();
             var description = $('#description').val();
@@ -75,14 +78,11 @@ $(function() {
 					$('[name="end"]').val("");
                     $('[name="disposisi"]').val("");
                     $('[name="keterangan"]').val("");
-                    $('#Modal_Add').modal('hide');
-                    show_product();
+                    $('#Modal_Add').modal('hide');                   
                 }
             });
             return false;
-        });
-
-  });	
+        });  
 
 });
 /*
