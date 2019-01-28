@@ -82,7 +82,7 @@ $(function() {
                             end         : moment($('#create_modal input[name=end]').val()).format('YYYY-MM-DD HH:mm:ss'),
                             disposisi   : $('#create_modal select[name=disposisi]').val()
                         };
-                        $('#calendarIO').fullCalendar('renderEvent', eventData, true); // stick? = true
+                        $('#calendar').fullCalendar('renderEvent', eventData, true); // stick? = true
                         $('#create_modal').modal('hide');
                         element[0].reset();
                         $('.notification').removeClass('alert-danger').addClass('alert-primary').find('p').html(data.notif);

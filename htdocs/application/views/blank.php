@@ -292,12 +292,12 @@ $this->load->view('template/menu');
                                                     </div>
 													<div class="form-group">
                                                         <label for="start" class="control-label">Mulai:</label>
-                                                        <input type="text" class="form-control" name="start">
+                                                        <input type="text" class="form-control" name="start" id="date-format">
                                                     </div>
 													
 													<div class="form-group">
                                                         <label for="end" class="control-label">Selesai:</label>
-                                                        <input type="text" class="form-control" name="end">
+                                                        <input type="text" class="form-control" name="end" id="date-format">
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="keterangan" class="control-label">Keterangan:</label>
