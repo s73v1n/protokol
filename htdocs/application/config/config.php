@@ -27,9 +27,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $root = "http://".$_SERVER['HTTP_HOST'];
 $root .= dirname($_SERVER['SCRIPT_NAME']);
 $config['base_url'] = $root;
-*/
-$config['base_url'] = "http://".$_SERVER['SERVER_NAME']."/protokol/";
 
+$config['base_url'] = "http://".$_SERVER['SERVER_NAME']."/protokol/";
+*/
+$config['base_url'] = '';
 /*
 |--------------------------------------------------------------------------
 | Index File
