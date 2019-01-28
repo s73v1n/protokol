@@ -62,7 +62,7 @@ $(function() {
             var element = $(this);
             var eventData;
             $.ajax({
-                url     : backend_url+'calendar/addEvent',
+                url     : base_url+'calendar/addEvent',
                 type    : element.attr('method'),
                 data    : element.serialize(),
                 dataType: 'JSON',
