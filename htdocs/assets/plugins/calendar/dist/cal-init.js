@@ -1,5 +1,5 @@
 $(function() {
-	var base_url='http://13.76.224.94/protokol/';
+	var base_url='<?php echo base_url()?>';
 	$('#date-format').bootstrapMaterialDatePicker({ format : 'YYYY-MM-DD HH:mm:ss' }); 
 	$('#calendar').fullCalendar({
 		header: {
@@ -8,7 +8,7 @@ $(function() {
             right: 'month, agendaWeek, agendaDay'
         },
 		events: {
-			url: 'api/agenda/agenda',
+			url: base_url+'api/agenda/agenda',
 			
 		},
 		defaultView: 'month',
@@ -81,6 +81,7 @@ $(function() {
                             start       : moment($('#create_modal input[name=start]').val()).format('YYYY-MM-DD HH:mm:ss'),
                             end         : moment($('#create_modal input[name=end]').val()).format('YYYY-MM-DD HH:mm:ss'),
                             disposisi   : $('#create_modal select[name=disposisi]').val()
+							keterangan   : $('#create_modal select[name=keterangan]').val()
                         };
                         $('#calendar').fullCalendar('renderEvent', eventData, true); // stick? = true
                         $('#create_modal').modal('hide');
